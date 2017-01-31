@@ -1,0 +1,16 @@
+C:\Users\FantasticMonkey\documents\visual studio 2012\Projects\MLAW_Order_System\MLAW_Order_System\bin\x64\liblept168.dll
+C:\Users\FantasticMonkey\documents\visual studio 2012\Projects\MLAW_Order_System\MLAW_Order_System\bin\x64\libtesseract302.dll
+C:\Users\FantasticMonkey\documents\visual studio 2012\Projects\MLAW_Order_System\MLAW_Order_System\bin\x86\liblept168.dll
+C:\Users\FantasticMonkey\documents\visual studio 2012\Projects\MLAW_Order_System\MLAW_Order_System\bin\x86\libtesseract302.dll
+C:\Users\FantasticMonkey\documents\visual studio 2012\Projects\MLAW_Order_System\MLAW_Order_System\bin\MLAW_Order_System.dll
+C:\Users\FantasticMonkey\documents\visual studio 2012\Projects\MLAW_Order_System\MLAW_Order_System\bin\MLAW_Order_System.pdb
+C:\Users\FantasticMonkey\documents\visual studio 2012\Projects\MLAW_Order_System\MLAW_Order_System\bin\Ghostscript.NET.dll
+C:\Users\FantasticMonkey\documents\visual studio 2012\Projects\MLAW_Order_System\MLAW_Order_System\bin\itextsharp.dll
+C:\Users\FantasticMonkey\documents\visual studio 2012\Projects\MLAW_Order_System\MLAW_Order_System\bin\Tesseract.dll
+C:\Users\FantasticMonkey\documents\visual studio 2012\Projects\MLAW_Order_System\MLAW_Order_System\bin\Ghostscript.NET.xml
+C:\Users\FantasticMonkey\documents\visual studio 2012\Projects\MLAW_Order_System\MLAW_Order_System\bin\itextsharp.xml
+C:\Users\FantasticMonkey\documents\visual studio 2012\Projects\MLAW_Order_System\MLAW_Order_System\bin\Tesseract.xml
+C:\Users\FantasticMonkey\documents\visual studio 2012\Projects\MLAW_Order_System\MLAW_Order_System\obj\Release\MLAW_Order_System.csproj.ResolveComReference.cache
+C:\Users\FantasticMonkey\documents\visual studio 2012\Projects\MLAW_Order_System\MLAW_Order_System\obj\Release\MLAW_Order_System.dll
+C:\Users\FantasticMonkey\documents\visual studio 2012\Projects\MLAW_Order_System\MLAW_Order_System\obj\Release\MLAW_Order_System.pdb
+C:\Users\FantasticMonkey\documents\visual studio 2012\Projects\MLAW_Order_System\MLAW_Order_System\obj\Release\MLAW_Order_System.csprojResolveAssemblyReference.cache

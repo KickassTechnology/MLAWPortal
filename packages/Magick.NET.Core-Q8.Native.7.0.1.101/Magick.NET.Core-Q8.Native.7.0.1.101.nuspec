@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Magick.NET.Core-Q8.Native</id>
+    <version>7.0.1.101</version>
+    <title>Magick.NET.Core-Q8.Native</title>
+    <authors>Dirk Lemstra</authors>
+    <owners>Dirk Lemstra</owners>
+    <licenseUrl>https://magick.codeplex.com/license</licenseUrl>
+    <projectUrl>https://magick.codeplex.com/documentation</projectUrl>
+    <iconUrl>http://download-codeplex.sec.s-msft.com/Download/SourceControlFileDownload.ashx?ProjectName=magick&amp;changeSetId=752622e7b2e069b698a47df994dd4aaaf1d8aebe&amp;itemId=Magick.NET.Tests%2fImages%2fMagick.NET.icon.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>The native library that is automatically used by Magick.NET.Core-Q8</description>
+    <summary>A .NET API to the ImageMagick image-processing library for Desktop and Web.</summary>
+    <copyright>Copyright 2013-2016 Dirk Lemstra</copyright>
+    <tags>ImageMagick Magick.NET.Core.Native</tags>
+    <dependencies>
+      <group targetFramework="Unsupported0.0">
+        <dependency id="System.Runtime" version="4.0.21-beta-23516" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>

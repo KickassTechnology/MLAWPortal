@@ -1,0 +1,1007 @@
+﻿
+
+<div class="inspection_form">
+
+    <div class="inf_form_proj_num">1616001002.001</div>
+    <div class="inf_form_address">Parmer Village</div>
+    <div class="inf_form_address">Unit 21 - 13700 Sage Grouse Drive</div>
+    <div style="height:20px;"></div>
+    <div style="margin-left:40px;width:800px;">
+        <div class="insp_form_label" style="width:200px;float:left;padding:0px;">Design Date:</div>
+        <div class="insp_form_regular" style="width:400px;float:left;margin:0px;">2/4/2016</div>
+        <div style="clear:both"></div>
+        
+        <div class="insp_form_label" style="width:200px;float:left;">
+            Plan Number:
+        </div>
+        <div class="insp_form_regular" style="width:400px;float:left;margin:0px;">
+            2/4/2016
+        </div>
+        <div style="clear:both"></div>
+
+        <div class="insp_form_label" style="width:200px;float:left;">
+            Design PI:
+        </div>
+        <div class="insp_form_regular" style="width:400px;float:left;margin:0px;">
+            60
+        </div>
+        <div style="clear:both"></div>
+        <div class="insp_form_label" style="width:200px;float:left;">
+            Inspection Date:
+        </div>
+        <div class="insp_form_regular" style="width:400px;float:left;margin:0px;">
+            3/24/2016
+        </div>
+        <div style="clear:both"></div>
+        <div class="insp_form_label" style="width:200px;float:left;">
+            Arrived:
+        </div>
+        <div class="insp_form_regular" style="width:400px;float:left;margin:0px;">
+            <input type="text" id="arrival_time" />
+        </div>
+        <div style="clear:both"></div>
+        <div class="insp_form_label" style="width:200px;float:left;">
+            Departed:
+        </div>
+        <div class="insp_form_regular" style="width:400px;float:left;margin:0px;">
+            <input type="text" id="departed_time" />
+        </div>
+        <div style="clear:both"></div>
+        <div class="insp_form_label" style="width:200px;float:left;">
+            Weather:
+        </div>
+        <div class="insp_form_regular" style="width:400px;float:left;margin:0px;">
+            <input type="text" id="weather" />
+        </div>
+        <div style="clear:both"></div>
+        <div class="insp_form_label" style="width:200px;float:left;">
+            Concrete Sub:
+        </div>
+        <div class="insp_form_regular" style="width:400px;float:left;margin:0px;">
+            <input type="text" id="conrete_sub" />
+        </div>
+        <div style="clear:both"></div>
+        <div class="insp_form_label" style="width:200px;float:left;">
+            Cable Sub:
+        </div>
+        <div class="insp_form_regular" style="width:400px;float:left;margin:0px;">
+            <input type="text" id="cable_sub" />
+        </div>
+
+    </div>
+    
+
+    <div style="height:60px;"></div>
+
+    <div class="insp_form_val">
+        <input type="checkbox" id="chk_site_conditions_match" />
+    </div>
+    <div class="insp_form_label">
+        Site Conditions match design assumptions
+    </div>
+    <div style="clear:both"></div>
+    <div style="height:10px;"></div>
+    <div class="insp_form_val">
+        <input type="checkbox" id="chk_grade_beams" />
+    </div>
+    <div class="insp_form_label">
+        Grade Beams/Footings on proper bearing surface
+    </div>
+    <div style="clear:both"></div>
+    <div class="insp_form_regular">
+        <br />
+        <b>Masonry Sides:</b><br /><br />
+        <div>
+            <div class="insp_form_radio">
+                &nbsp;&nbsp;1<br />
+                <input type="radio" value="1" name="grp_masonry_sides" />
+            </div>
+            <div class="insp_form_radio">
+                &nbsp;&nbsp;2<br />
+                <input type="radio" value="2" name="grp_masonry_sides" />
+            </div>
+            <div class="insp_form_radio">
+                &nbsp;&nbsp;3<br />
+                <input type="radio" value="3" name="grp_masonry_sides" />
+            </div>
+            <div class="insp_form_radio">
+                &nbsp;&nbsp;4<br />
+                <input type="radio" value="4" name="grp_masonry_sides" />
+            </div>
+            <div style="clear:both"></div>
+        </div>
+    </div>
+    <div class="insp_form_regular">
+        <br />
+        <b>Floating Forms:</b><br /><br />
+        <div>
+            <div class="insp_form_radio" style="width:200px;margin-left:80px;">
+                
+                <input type="radio" value="Yes" name="grp_masonry_sides" />&nbsp;&nbsp;Yes
+            </div>
+            <div class="insp_form_radio" style="width:200px;">
+               
+                <input type="radio" value="No" name="grp_masonry_sides" />&nbsp;&nbsp;No
+            </div>
+
+            <div style="clear:both"></div>
+        </div>
+    </div>
+    <div class="insp_form_regular">
+        <br />
+        <b>Floating Heights:</b><br /><br />
+        <div>
+            <div class="insp_form_label" style="width:120px">
+                RF:
+            </div>
+            <div class="insp_form_text">
+               <input type="text" id="FH_RF_Val1" /> / <input type="text" id="FH_RF_Val2" />
+                
+            </div>
+            <div style="clear:both"></div>
+            <div style="height:10px;"></div>
+
+            <div class="insp_form_label" style="width:120px">
+                RR:
+            </div>
+            <div class="insp_form_text">
+               <input type="text" id="FH_RR_Val1" /> / <input type="text" id="FH_RR_Val2" />
+                
+            </div>
+            <div style="clear:both"></div>
+            <div style="height:10px;"></div>
+            <div class="insp_form_label" style="width:120px">
+                LR:
+            </div>
+            <div class="insp_form_text">
+               <input type="text" id="FH_LR_Val1" /> / <input type="text" id="FH_LR_Val2" />
+                
+            </div>
+            <div style="clear:both"></div>
+             <div style="height:10px;"></div>
+            <div class="insp_form_label" style="width:120px">
+                LF:
+            </div>
+            <div class="insp_form_text">
+               <input type="text" id="FH_LF_Val1" /> / <input type="text" id="FH_LF_Val2" />
+                
+            </div>
+            <div style="clear:both"></div>
+        </div>
+    </div>
+    <div class="insp_form_regular">
+        <br />
+        <b>Excavations:</b><br /><br />
+        <div>
+            <div class="insp_form_label" style="width:120px">
+              &nbsp; 
+            </div>
+            <div class="insp_form_text">
+               <div style="float:left;width:270px;">Scheduled</div> <div style="float:left;width:200px;">Actual</div>
+                <div style="clear:both"></div>
+            </div>
+            <div style="clear:both"></div>
+            <div style="height:10px;"></div>
+            <div class="insp_form_label" style="width:120px">
+                Width:
+            </div>
+            <div class="insp_form_text">
+               <input type="text" id="Text1" /> &nbsp; <input type="text" id="Text2" />
+                
+            </div>
+            <div style="clear:both"></div>
+            <div style="height:10px;"></div>
+            <div class="insp_form_label" style="width:120px">
+                Depth:
+            </div>
+            <div class="insp_form_text">
+               <input type="text" id="Text3" /> &nbsp; <input type="text" id="Text4" />
+                
+            </div>
+            <div style="clear:both"></div>
+            <div style="height:10px;"></div>
+            <div class="insp_form_label" style="width:120px">
+                Perim. pen.:
+            </div>
+            <div class="insp_form_text">
+               <input type="text" id="Text5" /> &nbsp; <input type="text" id="Text6" />
+                
+            </div>
+            <div style="clear:both"></div>
+
+        </div>
+
+    </div>
+    <div class="insp_form_regular">
+        <br />
+        <b>Deep Beam:</b><br /><br />
+        <div>
+            <div class="insp_form_radio" style="width:200px;margin-left:80px;">
+                
+                <input type="radio" value="6to12" name="grp_deep_beam" />&nbsp;&nbsp;6 - 12
+            </div>
+            <div class="insp_form_radio" style="width:200px;">
+               
+                <input type="radio" value="12to18" name="grp_deep_beam" />&nbsp;&nbsp;12 - 18
+            </div>
+            <div class="insp_form_radio" style="width:200px;">
+               
+                <input type="radio" value="over18" name="grp_deep_beam" />&nbsp;&nbsp;18+
+            </div>
+
+            <div style="clear:both"></div>
+        </div>
+
+    </div>
+    <div class="insp_form_regular">
+        <br />
+        
+            <div class="insp_form_label" style="width:240px;float:left;">
+                <b>Actual Penetration:</b>
+            </div>
+            <div class="insp_form_text" style="float:left;width:500px;">
+               <input type="text" id="actual_penetration" />
+                
+            </div>
+        <div style="clear:both"></div>
+
+    </div>
+    <div class="insp_form_regular">
+        <br />
+
+        <div class="insp_form_text" style="width:120px;">
+            Yes
+        </div>
+        <div class="insp_form_text" style="width:110px;">
+            N/A
+        </div>
+        <div class="insp_form_text" style="width:100px;">
+            No
+        </div>
+        <div class="insp_form_label" style="width:240px;">
+
+        </div>
+        <div style="clear:both"></div>
+        <div style="height:10px;"></div>
+        <div class="insp_form_radio" style="width:100px;margin-left:40px;">
+                
+            <input type="radio" value="6to12" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="12to18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="over18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_label" style="width:240px;">
+            Weep Pipes
+        </div>
+        <div style="clear:both"></div>
+        <div style="height:10px;"></div>
+        <div class="insp_form_radio" style="width:100px;margin-left:40px;">
+                
+            <input type="radio" value="6to12" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="12to18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="over18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_label" style="width:240px;">
+            Steel per Height/Detail
+        </div>
+        <div style="clear:both"></div>
+
+    </div>
+    <div class="insp_form_regular">
+        <br />
+        
+            <div class="insp_form_label" >
+                <b>Retaining Wall/ Drop-in Slab:</b>
+            </div>
+        <div style="height:50px;"></div>
+        <div class="insp_form_radio" style="width:200px;margin-left:90px;">
+                
+            <input type="radio" value="6to12" name="grp_deep_beam"  />&nbsp;&nbsp;&nbsp;19in - 4ft
+        </div>
+        <div class="insp_form_radio" style="width:200px;">
+               
+            <input type="radio" value="12to18" name="grp_deep_beam" />&nbsp;&nbsp;&nbsp;4ft - 8ft
+        </div>
+        <div class="insp_form_radio" style="width:200px;">
+               
+            <input type="radio" value="over18" name="grp_deep_beam" />&nbsp;&nbsp;&nbsp;8ft - 12ft
+        </div>
+
+        <div style="clear:both"></div>
+        <div style="height:40px;"></div>
+        <div class="insp_form_text" style="width:120px;">
+            Yes
+        </div>
+        <div class="insp_form_text" style="width:110px;">
+            N/A
+        </div>
+        <div class="insp_form_text" style="width:100px;">
+            No
+        </div>
+        <div style="clear:both"></div>
+        <div style="height:10px;">&nbsp;</div>
+        <div class="insp_form_radio" style="width:100px;margin-left:40px;">
+                
+            <input type="radio" value="6to12" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="12to18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="over18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_label" style="width:340px;">
+            Mira drain / Water proofing
+        </div>
+        <div style="clear:both"></div>
+        <div style="height:10px;"></div>
+        <div class="insp_form_radio" style="width:100px;margin-left:40px;">
+                
+            <input type="radio" value="6to12" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="12to18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="over18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_label" style="width:350px;">
+            Pipe Installed, Rigid, Daylighted
+        </div>
+        <div style="clear:both"></div>
+        <div style="height:10px;"></div>
+        <div class="insp_form_radio" style="width:100px;margin-left:40px;">
+                
+            <input type="radio" value="6to12" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="12to18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="over18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_label" style="width:240px;">
+            Steel per height / detail
+        </div>
+        <div style="clear:both"></div>
+        <div style="height:10px;"></div>
+        <div class="insp_form_radio" style="width:100px;margin-left:40px;">
+                
+            <input type="radio" value="6to12" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="12to18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="over18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_label" style="width:240px;">
+            Cable placement
+        </div>
+        <div style="clear:both"></div>
+            <div style="height:10px;"></div>
+    </div>
+        <div class="insp_form_regular">
+
+            <div class="insp_form_label" >
+                <b>SLAB REINFORCEMENT:</b>
+            </div>
+        <div style="clear:both"></div>
+            <div style="height:10px;"></div>
+            <div>
+                <div class="insp_form_radio" style="width:200px;margin-left:80px;">
+                
+                    <input type="radio" value="6to12" name="grp_deep_beam" />Tendon
+                </div>
+                <div class="insp_form_radio" style="width:200px;">
+               
+                    <input type="radio" value="12to18" name="grp_deep_beam" />Rebar
+                </div>
+
+                <div style="clear:both"></div>
+            </div>
+        
+        <div style="height:40px;"></div>
+       Tendons
+        <div style="height:40px;"></div>
+
+        <div class="insp_form_text" style="width:120px;">
+            Yes
+        </div>
+        <div class="insp_form_text" style="width:110px;">
+            N/A
+        </div>
+        <div class="insp_form_text" style="width:100px;">
+            No
+        </div>
+        <div style="clear:both"></div>
+        <div style="height:10px;">&nbsp;</div>
+        <div class="insp_form_radio" style="width:100px;margin-left:40px;">
+                
+            <input type="radio" value="6to12" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="12to18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="over18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_label" style="width:340px;">
+            Horizontal Placement
+        </div>
+        <div style="clear:both"></div>
+        <div style="height:10px;"></div>
+        <div class="insp_form_radio" style="width:100px;margin-left:40px;">
+                
+            <input type="radio" value="6to12" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="12to18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="over18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_label" style="width:350px;">
+            Vertical Placement
+        </div>
+        <div style="clear:both"></div>
+        <div style="height:10px;"></div>
+        <div class="insp_form_radio" style="width:100px;margin-left:40px;">
+                
+            <input type="radio" value="6to12" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="12to18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="over18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_label" style="width:240px;">
+            Chairs adequate
+        </div>
+        <div style="clear:both"></div>
+        <div style="height:10px;"></div>
+        <div class="insp_form_radio" style="width:100px;margin-left:40px;">
+                
+            <input type="radio" value="6to12" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="12to18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="over18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_label" style="width:240px;">
+            Concrete Coverage
+        </div>
+        <div style="clear:both"></div>
+        <div style="height:10px;"></div>
+        <div class="insp_form_radio" style="width:100px;margin-left:40px;">
+                
+            <input type="radio" value="6to12" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="12to18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="over18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_label" style="width:240px;">
+            Anchor weight/secured
+        </div>
+        <div style="clear:both"></div>
+        <div style="height:10px;"></div>
+        <div class="insp_form_radio" style="width:100px;margin-left:40px;">
+                
+            <input type="radio" value="6to12" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="12to18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="over18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_label" style="width:240px;">
+            Tendon Count / Match Plans
+        </div>
+            <div style="clear:both"></div>
+        <div style="height:40px;"></div>
+        Rebar
+        <div style="height:40px;"></div>
+
+        <div class="insp_form_text" style="width:120px;">
+            Yes
+        </div>
+        <div class="insp_form_text" style="width:110px;">
+            N/A
+        </div>
+        <div class="insp_form_text" style="width:100px;">
+            No
+        </div>
+        <div style="clear:both"></div>
+        <div style="height:10px;">&nbsp;</div>
+        <div class="insp_form_radio" style="width:100px;margin-left:40px;">
+                
+            <input type="radio" value="6to12" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="12to18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="over18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_label" style="width:340px;">
+            Diagonals - shrinkage
+        </div>
+        <div style="clear:both"></div>
+        <div style="height:10px;"></div>
+        <div class="insp_form_radio" style="width:100px;margin-left:40px;">
+                
+            <input type="radio" value="6to12" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="12to18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="over18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_label" style="width:350px;">
+            Footings Reincforcing
+        </div>
+        <div style="clear:both"></div>
+        <div style="height:10px;"></div>
+        <div class="insp_form_radio" style="width:100px;margin-left:40px;">
+                
+            <input type="radio" value="6to12" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="12to18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="over18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_label" style="width:240px;">
+            Mat Steel
+        </div>
+        <div style="clear:both"></div>
+        <div style="height:10px;"></div>
+        <div class="insp_form_radio" style="width:100px;margin-left:40px;">
+                
+            <input type="radio" value="6to12" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="12to18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="over18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_label" style="width:240px;">
+           Other reinforcing
+        </div>
+        <div style="clear:both"></div>
+        <div style="height:10px;"></div>
+        <div class="insp_form_radio" style="width:100px;margin-left:40px;">
+                
+            <input type="radio" value="6to12" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="12to18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="over18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_label" style="width:240px;">
+            Concrete Coverage
+        </div>
+
+
+    </div>
+
+        <div style="height:40px;"></div>
+        <div class="insp_form_regular">
+
+            <div class="insp_form_label" >
+                <b>BEAM REINFORCEMENT:</b>
+            </div>
+        <div style="clear:both"></div>
+
+        
+        <div style="height:20px;"></div>
+       Tendons
+        <div style="height:20px;"></div>
+
+        <div class="insp_form_text" style="width:120px;">
+            Yes
+        </div>
+        <div class="insp_form_text" style="width:110px;">
+            N/A
+        </div>
+        <div class="insp_form_text" style="width:100px;">
+            No
+        </div>
+        <div style="clear:both"></div>
+        <div style="height:10px;">&nbsp;</div>
+        <div class="insp_form_radio" style="width:100px;margin-left:40px;">
+                
+            <input type="radio" value="6to12" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="12to18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="over18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_label" style="width:340px;">
+            Drape In 7ft Maximum
+        </div>
+        <div style="clear:both"></div>
+        <div style="height:10px;"></div>
+        <div class="insp_form_radio" style="width:100px;margin-left:40px;">
+                
+            <input type="radio" value="6to12" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="12to18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="over18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_label" style="width:350px;">
+            Drape Depth, per plan
+        </div>
+        <div style="clear:both"></div>
+        <div style="height:10px;"></div>
+        <div class="insp_form_radio" style="width:100px;margin-left:40px;">
+                
+            <input type="radio" value="6to12" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="12to18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="over18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_label" style="width:240px;">
+            Horizontal Placement
+        </div>
+        <div style="clear:both"></div>
+        <div style="height:10px;"></div>
+        <div class="insp_form_radio" style="width:100px;margin-left:40px;">
+                
+            <input type="radio" value="6to12" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="12to18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="over18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_label" style="width:240px;">
+            Anchor height
+        </div>
+        <div style="clear:both"></div>
+        <div style="height:40px;"></div>
+        Rebar
+        <div style="height:40px;"></div>
+
+        <div class="insp_form_text" style="width:120px;">
+            Yes
+        </div>
+        <div class="insp_form_text" style="width:110px;">
+            N/A
+        </div>
+        <div class="insp_form_text" style="width:100px;">
+            No
+        </div>
+        <div style="clear:both"></div>
+        <div style="height:10px;">&nbsp;</div>
+        <div class="insp_form_radio" style="width:100px;margin-left:40px;">
+                
+            <input type="radio" value="6to12" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="12to18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="over18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_label" style="width:340px;">
+            As Per Sections
+        </div>
+        <div style="clear:both"></div>
+        <div style="height:10px;"></div>
+        <div class="insp_form_radio" style="width:100px;margin-left:40px;">
+                
+            <input type="radio" value="6to12" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="12to18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="over18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_label" style="width:240px;">
+            Laps = 30xbar diameter
+        </div>
+        <div style="clear:both"></div>
+        <div style="height:10px;"></div>
+        <div class="insp_form_radio" style="width:100px;margin-left:40px;">
+                
+            <input type="radio" value="6to12" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="12to18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="over18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_label" style="width:240px;">
+           Concrete Coverage
+        </div>
+        <div style="clear:both"></div>
+        <div style="height:10px;"></div>
+        <div class="insp_form_radio" style="width:100px;margin-left:40px;">
+                
+            <input type="radio" value="6to12" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="12to18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="over18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_label" style="width:240px;">
+            Corner bars
+        </div>
+        <div style="clear:both"></div>
+        <div style="height:10px;"></div>
+        <div class="insp_form_radio" style="width:100px;margin-left:40px;">
+                
+            <input type="radio" value="6to12" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="12to18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="over18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_label" style="width:240px;">
+            Other Reinforcing: &nbsp;&nbsp;&nbsp;<input type="text" id="other_reinforcing" />
+        </div>
+
+       </div>
+
+        <div style="height:40px;"></div>
+        <div class="insp_form_regular">
+
+            <div class="insp_form_label" >
+                <b>MISCELLANEOUS:</b>
+            </div>
+        <div style="clear:both"></div>
+
+        <div style="height:20px;"></div>
+
+        <div class="insp_form_text" style="width:120px;">
+            Yes
+        </div>
+        <div class="insp_form_text" style="width:110px;">
+            N/A
+        </div>
+        <div class="insp_form_text" style="width:100px;">
+            No
+        </div>
+        <div style="clear:both"></div>
+        <div style="height:10px;">&nbsp;</div>
+        <div class="insp_form_radio" style="width:100px;margin-left:40px;">
+                
+            <input type="radio" value="6to12" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="12to18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="over18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_label" style="width:340px;">
+            Sheathing / Poly Cont
+        </div>
+        <div style="clear:both"></div>
+        <div style="height:10px;"></div>
+        <div class="insp_form_radio" style="width:100px;margin-left:40px;">
+                
+            <input type="radio" value="6to12" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="12to18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="over18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_label" style="width:350px;">
+            Beams Acceptably Clean
+        </div>
+        <div style="clear:both"></div>
+        <div style="height:10px;"></div>
+        <div class="insp_form_radio" style="width:100px;margin-left:40px;">
+                
+            <input type="radio" value="6to12" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="12to18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="over18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_label" style="width:240px;">
+            Minimum Slab Thickness
+        </div>
+        <div style="clear:both"></div>
+        <div style="height:10px;"></div>
+        <div class="insp_form_radio" style="width:100px;margin-left:40px;">
+                
+            <input type="radio" value="6to12" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="12to18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="over18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_label" style="width:240px;">
+            Concrete Penetrations
+        </div>
+        <div style="clear:both"></div>
+        <div style="height:10px;"></div>
+        <div class="insp_form_radio" style="width:100px;margin-left:40px;">
+                
+            <input type="radio" value="6to12" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="12to18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="over18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_label" style="width:240px;">
+            Trees within 15 ft of Slab
+        </div>
+        <div style="clear:both"></div>
+                    <div style="height:10px;"></div>
+        <div class="insp_form_radio" style="width:100px;margin-left:40px;">
+                
+            <input type="radio" value="6to12" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="12to18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="over18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_label" style="width:240px;">
+            Tree Policies Installed
+        </div>
+        <div style="clear:both"></div>
+        <div style="height:10px;"></div>
+        <div class="insp_form_radio" style="width:100px;margin-left:40px;">
+                
+            <input type="radio" value="6to12" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="12to18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="over18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_label" style="width:240px;">
+            Hard Points Installed
+        </div>
+        <div style="clear:both"></div>
+        <div style="height:10px;"></div>
+        <div class="insp_form_radio" style="width:100px;margin-left:40px;">
+                
+            <input type="radio" value="6to12" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="12to18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_radio" style="width:100px;">
+               
+            <input type="radio" value="over18" name="grp_deep_beam" />
+        </div>
+        <div class="insp_form_label" style="width:240px;">
+            Hold Downs Installed
+        </div>
+        <div style="clear:both"></div>
+        <div style="height:50px;"></div>
+        <div class="insp_form_radio" style="width:300px;margin-left:120px;">
+                
+            <input type="radio" value="6to12" name="grp_deep_beam"  />&nbsp;&nbsp;&nbsp;APPROVED
+        </div>
+        <div class="insp_form_radio" style="width:300px;">
+               
+            <input type="radio" value="12to18" name="grp_deep_beam" />&nbsp;&nbsp;&nbsp;WITHELD
+        </div>
+
+        <div style="clear:both"></div>
+        <div style="height:40px;"></div>
+        <div class="insp_form_regular" style="margin-left:0px;text-align:left;width:800px;">Details:</div>
+        <div style="width:740px;">
+            <textarea id="reason" style="width:600px;height:600px;"></textarea>
+
+
+        </div>
+</div>

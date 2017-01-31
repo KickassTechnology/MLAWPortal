@@ -1,0 +1,262 @@
+﻿                <div style="margin-top:20px;width:1400px;text-align:left;" id="view_form_container">
+                    <div style="float:left;width:700px">
+                        <div class="frm_row">
+                            <div style="margin-right:20px;font-size:24px;font-weight:600;float:left;">MLAW NUMBER:</div>
+                            <div style="margin-right:20px;font-size:24px;font-weight:600;float:left;" id="vw_mlaw_number">
+                            
+                            </div>
+                            <div style="clear:both;"></div>
+                        </div>      
+
+                        <div class="frm_row">
+                            <div class="frm_label" style="width:120px;">Is this a revision:</div>
+                            <div class="frm_view" id="vw_rev">
+                            </div>
+                            <div style="clear:both;"></div>
+                        </div>
+                        <div class="frm_row">
+                            <div class="frm_label" style="width:120px;">CLIENT:</div>
+                            <div class="frm_view" id="vw_client_name">
+                            </div>
+                            <div style="clear:both;"></div>
+                        </div>         
+                        <div class="frm_row">
+                            <div class="frm_label" style="width:120px;">FOUNDATION:</div>
+                            <div class="frm_view" id="vw_foundation_type">
+                            </div>
+                            <div style="clear:both;"></div>
+                        </div>              
+                        <div class="frm_row">
+                            <div class="frm_label" style="width:120px;">Date Received:</div>
+                            <div class="frm_view" id="vw_date_received"></div>
+                            <div style="clear:both;"></div>
+                        </div>
+                        <div class="frm_row">
+                            <div class="frm_label" style="width:120px;">Status:</div>
+                            <div class="frm_view">
+                                <select id="vw_ord_status" onchange="toggleDesigner()">
+                                    <option value="5">Assigned</option>
+                                    <option value="6">Hold per Builder Request</option>
+                                    <option value="7">Hold for Questions</option>
+                                    <option value="8">Designer Complete</option>
+                                </select>
+                            </div>
+                            <div style="clear:both;"></div>
+                        </div>
+                        <div class="frm_row" style="display:none;" id="designer_comments_holder">
+                            <div class="frm_label" style="width:120px;">Hold Details:</div>
+                            <div class="frm_view">
+                                <textarea id="vw_designer_comments" style="width:600px;height:50px;"></textarea>
+                            </div>
+                            <div style="clear:both;"></div>
+                        </div>
+                        <div class="frm_row">
+                            <div class="frm_label" style="width:120px;">Invoice Number:</div>
+                            <div class="frm_view" id="vw_invoice_number"></div>
+                            <div style="clear:both;"></div>
+                        </div>
+                        <div id="design_upload" style="display:none;">
+                            <div id="dragandrophandler">Drag & Drop Files Here</div>
+                            <br>
+                            <div id="status1"></div>
+                        </div>
+                        <div class="frm_row" style="display:none;" id="vw_update_button"">
+                            <div class="frm_label" style="width:120px;">&nbsp;</div>
+                            <div class="frm_view">
+                                <div class="button" style="width:200px;" onclick="updateForDesigner()">update</div>                    
+                            </div>
+                            <div style="clear:both;"></div>
+                        </div>
+                    </div>
+                    <div style="float:left;">
+                            <div style="margin-top:24px;font-size:18px;font-weight:500">
+                                SUPPORTING FILES
+                            </div>
+                            <div id="ord_edit_file_list"></div>
+                    </div>
+                    <div style="clear:both"></div>
+                    <div style="height:40px;"></div>
+                    <div >
+                        <div class="frm_row" style="float:left;width:400px;">
+                            <div class="frm_label">Subdivision:</div>
+                            <div class="frm_view" style="width:300px;" id="vw_subdivision">
+                            </div>
+                            <div style="clear:both;"></div>
+                        </div>
+                        <div class="frm_row" style="float:left;width:370px;">
+                            <div class="frm_label" style="width:80px;">Contact:</div>
+                            <div class="frm_view" style="width:250px;" id="vw_contact"></div>
+                            <div style="clear:both;"></div>
+                        </div>
+                        <div class="frm_row" style="float:left;">
+                            <div class="frm_label">Phone:</div>
+                            <div class="frm_view" id="vw_phone"></div>
+                            <div style="clear:both;"></div>
+                        </div>
+                        <div style="clear:both"></div>
+                    </div>
+                    <div >
+                        <div class="frm_row" style="float:left;width:400px;">
+                            <div class="frm_label">Address:</div>
+                            <div class="frm_view" style="width:300px;" id="vw_address"></div>
+                            <div style="clear:both;"></div>
+                        </div>
+                        <div class="frm_row" style="float:left;width:370px;">
+                            <div class="frm_label" style="width:80px;">Section:</div>
+                            <div class="frm_view" style="width:250px;" id="vw_section"></div>
+                            <div style="clear:both;"></div>
+                        </div>
+                        <div class="frm_row" style="float:left;">
+                            <div class="frm_label">Phase:</div>
+                            <div class="frm_view" id="vw_phase"></div>
+                            <div style="clear:both;"></div>
+                        </div>
+                        <div style="clear:both"></div>
+                    </div>
+                    <div >
+                        <div class="frm_row" style="float:left;width:200px">
+                            <div class="frm_label">Lot #:</div>
+                            <div class="frm_view" style="width:100px;" id="vw_lot"></div>
+                            <div style="clear:both;"></div>
+                        </div>
+                         <div class="frm_row" style="float:left;width:200px;">
+                            <div class="frm_label" style="width:55px;">Block:</div>
+                            <div class="frm_view" style="width:100px;" id="vw_block"></div>
+                            <div style="clear:both;"></div>
+                        </div>
+                        <div class="frm_row" style="float:left;width:370px;">
+                            <div class="frm_label" style="width:80px;">County:</div>
+                            <div class="frm_view" style="width:250px;" id="vw_county"></div>
+                            <div style="clear:both;"></div>
+                        </div>
+                        <div class="frm_row" style="float:left;">
+                            <div class="frm_label">City:</div>
+                            <div class="frm_view" id="vw_city"></div>
+                            <div style="clear:both;"></div>
+                        </div>
+                        <div style="clear:both"></div>
+                    </div>
+                                        <div >
+                        <div class="frm_row" style="float:left;width:400px">
+                            <div class="frm_label">Plan Name:</div>
+                            <div class="frm_view" style="width:300px;" id="vw_plan_name"></div>
+                            <div style="clear:both;"></div>
+                        </div>
+                         <div class="frm_row" style="float:left;width:370px;">
+                            <div class="frm_label">Elevation:</div>
+                            <div class="frm_view" style="width:100px;" id="vw_elevation"></div>
+                            <div style="clear:both;"></div>
+                        </div>
+                        <div class="frm_row" style="float:left;">
+                            <div class="frm_label">Plan #:</div>
+                            <div class="frm_view" style="width:100px;" id="vw_plan_number"></div>
+                            <div style="clear:both;"></div>
+                        </div>
+                        <div style="clear:both"></div>
+                    </div>
+                    <div style="height:40px;"></div>
+
+                    <div class="frm_row">
+                        <div class="frm_label">Garage Type:</div>
+                        <div class="frm_view" id="vw_garage">
+                        </div>
+                        <div style="clear:both;"></div>
+                    </div>
+                    <div class="frm_row">
+                        <div class="frm_label">Patio:</div>
+                        <div class="frm_view" id="vw_patio">
+                        </div>
+                        <div style="clear:both;"></div>
+                    </div>
+                    <div class="frm_row">
+                        <div class="frm_label">Masonry Sides:</div>
+                        <div class="frm_view" id="vw_masonry_sides">
+                        </div>
+                        <div style="clear:both;"></div>
+                    </div>
+                    <div class="frm_row" style="display:none;">
+                        <div class="frm_label">Fireplace:</div>
+                        <div class="frm_view" id="vw_fireplace">
+                        </div>
+                        <div style="clear:both;"></div>
+                    </div>
+                    <div style="height:40px;"></div>
+                    <div class="frm_row">
+                        <div class="frm_label">Additional Features:</div>
+                        <div class="frm_view" id="vw_comments">
+                        </div>
+                        <div style="clear:both;"></div>
+                    </div>
+                    <div style="height:40px;"></div>
+                </div>
+                <div id="designer_info" style="text-align:left;">
+                        <div class="frm_row">
+                        <div style="float:left;">
+                                <div class="frm_label" style="width:140px;">Soils Data Source:</div>
+                                <div class="frm_view" style="width:300px;" id="vw_soils_data_source"></div>
+                                <div style="clear:both;"></div>
+                        </div>
+                        <div style="float:left;width:230px;">
+                                <div class="frm_label" style="width:140px;">Visual Geotec Date:</div>
+                                <div class="frm_view" style="width:70px;" id="vw_viz_geo_date"></div>
+                                <div style="clear:both;"></div>
+                        </div>
+                        <div style="float:left;">
+                                <div class="frm_label" style="width:80px;">Slab Sq Ft:</div>
+                                <div class="frm_view" style="width:70px;" id="vw_slab_sq_ft"></div>
+                                <div style="clear:both;"></div>
+                        </div>
+                        <div style="clear:both"></div>
+                      </div>
+                    <div style="height:10px;"></div>
+                    <div class="frm_row">
+                        <div style="float:left;width:170px;">
+                            <div class="frm_label" style="width:40px;">PI:</div>
+                            <div class="frm_view" style="width:70px;" id="vw_PI"></div>
+                            <div style="clear:both;"></div>
+                        </div>
+                        <div style="float:left;width:200px;">
+                            <div class="frm_label" style="width:100px;">Fill Applied:</div>
+                            <div class="frm_view" style="width:70px;" id="vw_fill_applied"></div>
+                            <div style="clear:both;"></div>
+                        </div>
+                        <div style="float:left;width:170px;">
+                            <div class="frm_label" style="width:80px;">Slope:</div>
+                            <div class="frm_view" style="width:70px;" id="vw_slope"></div>
+                            <div style="clear:both;"></div>
+                        </div>
+                        <div style="float:left;width:170px;">
+                            <div class="frm_label" style="width:80px;">Brg cap:</div>
+                            <div class="frm_view" style="width:70px;" id="vw_brg_cap"></div>
+                            <div style="clear:both;"></div>
+                        </div>
+                        <div style="clear:both;"></div>
+                    </div>
+
+                    <div >
+
+                        <div class="frm_row" style="float:left;width:170px;">
+                            <div class="frm_label" style="width:60px;">Em ctr:</div>
+                            <div class="frm_view" style="width:70px;" id="vw_em_ctr"></div>
+                            <div style="clear:both;"></div>
+                        </div>
+                        <div class="frm_row" style="float:left;width:170px;">
+                            <div class="frm_label" style="width:60px;">Em edg:</div>
+                            <div class="frm_view" style="width:70px;" id="vw_em_edg"></div>
+                            <div style="clear:both;"></div>
+                        </div>
+                        <div class="frm_row" style="float:left;width:170px;">
+                            <div class="frm_label" style="width:60px;">Ym ctr:</div>
+                            <div class="frm_view" style="width:70px;" id="vw_ym_ctr"></div>
+                            <div style="clear:both;"></div>
+                        </div>
+                        <div class="frm_row" style="float:left;width:170px;">
+                            <div class="frm_label" style="width:60px;">Ym edg:</div>
+                            <div class="frm_view" style="width:70px;" id="vw_ym_edg"></div>
+                            <div style="clear:both;"></div>
+                        </div>
+                        <div style="clear:both"></div>
+                    </div>
+
+
+                </div>

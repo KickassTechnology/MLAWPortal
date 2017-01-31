@@ -1,0 +1,126 @@
+﻿<div>
+    <div class="frm_row">
+        <div class="frm_label" style="width:120px;">
+            Address:
+        </div>
+        <div class="frm_input">
+            <input type="text" id="ord_ins_address" style="width:300px;" onkeydown="doInsAddressMatches()"/>
+        </div>
+        <div style="clear:both"></div>
+    </div>
+    <div class="frm_row">
+        <div class="frm_label" style="width:120px;">
+            Matches:
+        </div>
+        <div class="frm_input" id="ord_ins_address_matches">
+
+
+        </div>
+        <input type="hidden" id="ord_ins_order_id" />
+        <div style="clear:both"></div>
+    </div>
+
+    <div class="frm_row">
+        <div class="frm_label" style="width:120px;">
+            Inspection Type:
+        </div>
+        <div class="frm_input">
+            <select id="ord_ins_inspection_type" style="width:300px;" onchange="checkOther()">
+                
+            
+            </select>
+            
+        </div>
+        <div style="clear:both"></div>
+    </div>
+    <div class="frm_row" id="other_row" style="display:none;">
+        <div class="frm_label" style="width:120px;">
+            Please Explain:
+        </div>
+        <div class="frm_input">
+            <input type="text" id="ord_ins_type_other" style="width:300px;"/>            
+        </div>
+        <div style="clear:both"></div>
+    </div>
+
+    <br />
+    <div class="frm_row">
+        <div style="width:200px;font-weight:600;text-transform:uppercase">
+            Is this a Re-Inspection?
+        </div>
+        <div style="padding-top:5px;">
+            
+            <input type="radio" name="ord_ins_re_inspection" value="0" checked/> No<br />
+            <input type="radio" name="ord_ins_re_inspection" value="1"/> Yes<br />
+        </div>
+        
+    </div>
+
+    <div class="frm_row">
+        <div style="width:200px;font-weight:600;text-transform:uppercase">
+            Is this a Multi Stage Pour?
+        </div>
+        <div style="padding-top:5px;">
+            <input type="radio" name="ord_ins_multi_pour" value="0" checked /> No<br />
+            <input type="radio" name="ord_ins_multi_pour" value="1"/> Yes<br />
+            <input type="radio" name="ord_ins_multi_pour" value="2"/> Not Sure<br />
+        </div>
+    </div>
+    <div class="frm_row">
+        <div style="width:200px;font-weight:600;text-transform:uppercase">
+            Inspection Time:
+        </div>
+        <div style="padding-top:5px;">
+            <input type="radio" name="ord_ins_time" value="0" checked /> No Prefence<br />
+            <input type="radio" name="ord_ins_time" value="1"/> AM<br />
+            <input type="radio" name="ord_ins_time" value="2"/> PM<br />
+        </div>
+    </div>
+    <br />
+   <div class="frm_row">
+        <div class="frm_label" style="width:120px;">
+            Email:
+        </div>
+        <div class="frm_input">
+            <input type="text" id="ord_ins_email"></input>
+        </div>
+        <div style="clear:both"></div>
+    </div>
+   <div class="frm_row">
+        <div class="frm_label" style="width:120px;">
+            Phone Number:
+        </div>
+        <div class="frm_input">
+            <input type="text" id="ord_ins_phone"></input>
+        </div>
+        <div style="clear:both"></div>
+    </div>
+
+    
+    <div class="frm_row">
+        <div style="width:200px;text-transform:uppercase;font-weight:600;">
+            Can we text to this number?
+        </div>
+        <div style="padding-top:5px;">
+            <input type="radio" name="ord_ins_can_text" value="0" checked/> No<br />
+            <input type="radio" name="ord_ins_can_text" value="1"/> Yes<br />
+        </div>
+        <div style="clear:both"></div>
+    </div>
+    <br />
+
+   <div class="frm_row">
+        <div style="width:200px;font-weight:600;text-transform:uppercase">
+           Specific Time Needs & Reason:
+        </div>
+        <div style="padding-top:5px;">
+            <textarea id="ord_ins_special_notes" style="width:400px;height:150px;"></textarea>
+        </div>
+    </div>
+    <br />
+
+    <div class="frm_row">
+        <input type="button" value="create order" onclick="createInspectionOrder()" />
+
+    </div>
+</div>

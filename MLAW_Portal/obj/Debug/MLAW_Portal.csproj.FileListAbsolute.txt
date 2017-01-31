@@ -1,0 +1,11 @@
+C:\Users\Joe\documents\visual studio 2012\Projects\MLAW_Portal\MLAW_Portal\bin\MLAW_Portal.dll
+C:\Users\Joe\documents\visual studio 2012\Projects\MLAW_Portal\MLAW_Portal\bin\MLAW_Portal.pdb
+C:\Users\Joe\documents\visual studio 2012\Projects\MLAW_Portal\MLAW_Portal\bin\PdfSharp.Charting.dll
+C:\Users\Joe\documents\visual studio 2012\Projects\MLAW_Portal\MLAW_Portal\bin\PdfSharp.dll
+C:\Users\Joe\documents\visual studio 2012\Projects\MLAW_Portal\MLAW_Portal\bin\PdfSharp.xml
+C:\Users\Joe\documents\visual studio 2012\Projects\MLAW_Portal\MLAW_Portal\bin\PdfSharp.Charting.xml
+C:\Users\Joe\documents\visual studio 2012\Projects\MLAW_Portal\MLAW_Portal\bin\de\PdfSharp.resources.dll
+C:\Users\Joe\documents\visual studio 2012\Projects\MLAW_Portal\MLAW_Portal\bin\de\PdfSharp.Charting.resources.dll
+C:\Users\Joe\documents\visual studio 2012\Projects\MLAW_Portal\MLAW_Portal\obj\Debug\MLAW_Portal.dll
+C:\Users\Joe\documents\visual studio 2012\Projects\MLAW_Portal\MLAW_Portal\obj\Debug\MLAW_Portal.pdb
+C:\Users\Joe\documents\visual studio 2012\Projects\MLAW_Portal\MLAW_Portal\obj\Debug\MLAW_Portal.csprojResolveAssemblyReference.cache

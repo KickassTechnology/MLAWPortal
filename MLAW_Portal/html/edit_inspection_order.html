@@ -1,0 +1,267 @@
+﻿<div style="margin-top:20px;margin-left:40px;width:1400px;text-align:left;position:relative;">
+    <div style="float:left;width:700px;">
+                <div class="txt_clickable" onclick="history.back()">< CANCEL</div>
+                <div class="app_section_title">MLAW Number: <span id="ord_edit_mlaw_number"></span></div>
+                <br />
+
+                    <div style="margin-top:20px;width:1400px;">
+                    <div style="width:500px;float:left">
+                         <div class="frm_row">
+                            <div class="frm_label" style="width:120px;">CURRENT STATUS:</div>
+                            <div class="frm_view" >
+                                <select id="ord_edit_status">
+                                      <option value="1">New</option>
+                                      <option value="2">Scheduled</option>
+                                      <option value="3">Completed</option>
+                                </select>
+                            </div>
+                            <div style="clear:both"></div>
+                        </div>
+                        <div class="frm_row">
+                            <div class="frm_label" style="width:120px;">INSPECTION TYPE:</div>
+                            <div class="frm_input" id="">
+                                  <select id="ord_edit_inspection_type">
+
+                                  </select>
+                            </div>
+                            <div style="clear:both"></div>
+                        </div>                            
+
+                        <div class="frm_row">
+                            <div class="frm_label" style="width:120px;">PASS/FAIL:</div>
+                            <div class="frm_input" id="ord_edit">
+                                  <select id="ord_edit_pass_fail">
+                                      <option value="0">Not Inspected Yet</option>
+                                      <option value="1">Pass</option>
+                                      <option value="2">Fail</option>
+                                  </select>
+                            </div>
+                            <div style="clear:both"></div>
+                        </div>                            
+                        <div class="frm_row">
+                            <div class="frm_label" style="width:120px;">COMMENTS:</div>
+                            <div class="frm_input">
+                                <textarea id="ord_edit_insp_comments"></textarea>
+                            </div>
+                            <div style="clear:both;"></div>
+                        </div>
+                        <div class="frm_row">
+                            <div class="frm_label" style="width:120px;">&nbsp;</div>
+                            <div class="frm_view">
+                                <input type="hidden" id="ord_edit_insp_order_id" />
+                                <input type="button" text="update" value="update" onclick="updateInspectionOrder()"></div>
+
+                        </div>
+                        <div style="height:20px;">&nbsp;</div>
+                        <br />              
+                        <div class="frm_row">
+                            <div class="frm_label" style="width:120px;">Company:</div>
+                            <div class="frm_view" id="ord_edit_company">
+
+                            </div>
+                            <div style="clear:both;"></div>
+                        </div>
+                        <div class="frm_row">
+                            <div class="frm_label" style="width:120px;">Date Ordered:</div>
+                            <div class="frm_view" id="ord_edit_date_received"></div>
+                            <div style="clear:both;"></div>
+                        </div>
+                    </div>
+                    <div style="float:left">
+                        SUPPORTING FILES<br />
+                        <div id="ord_edit_file_list"></div>
+
+                    </div>
+                    <div style="clear:both"></div>
+                    <div style="height:20px;"></div>
+                    <div >
+                        <div class="frm_row" style="float:left;width:400px;">
+                            <div class="frm_label">Address:</div>
+                            <div class="frm_view" style="width:300px;" id="ord_edit_address"></div>
+                            <div style="clear:both;"></div>
+                        </div>
+
+                        <div class="frm_row" style="float:left;width:400px;">
+                            <div class="frm_label">Subdivision:</div>
+                            <div class="frm_view" style="width:300px;" id="ord_edit_subdivision">
+                            </div>
+                            <div style="clear:both;"></div>
+                        </div>
+                        <div style="clear:both"></div>
+                    </div>
+                    <div style="height:20px;"></div>
+                        <div class="frm_row" style="float:left;width:200px">
+                            <div class="frm_label" style="width:80px;">Lot #:</div>
+                            <div class="frm_view" style="width:100px;" id="ord_edit_lot"></div>
+                            <div style="clear:both;"></div>
+                        </div>
+                         <div class="frm_row" style="float:left;width:400px;">
+                            <div class="frm_label">Block:</div>
+                            <div class="frm_view" style="width:100px;" id="ord_edit_block"></div>
+                            <div style="clear:both;"></div>
+                        </div>
+                        <div class="frm_row" style="float:left;width:370px;">
+                            <div class="frm_label" >Section:</div>
+                            <div class="frm_view" style="width:250px;" id="ord_edit_section"></div>
+                            <div style="clear:both;"></div>
+                        </div>
+                        <div style="clear:both"></div>
+                    </div>
+                    <div >
+                        <div class="frm_row" style="float:left;width:200px;">
+                            <div class="frm_label" style="width:80px;">City:</div>
+                            <div class="frm_view" style="width:100px;" id="ord_edit_city"></div>
+                            <div style="clear:both;"></div>
+                        </div>
+                        <div class="frm_row" style="float:left;width:400px;">
+                            <div class="frm_label">County:</div>
+                            <div class="frm_view" style="width:250px;" id="ord_edit_county"></div>
+                            <div style="clear:both;"></div>
+                        </div>
+
+                        <div style="clear:both"></div>
+                    </div>
+                    <div >
+                        <div class="frm_row" style="float:left;width:200px;">
+                            <div class="frm_label" style="width:80px;">Plan #:</div>
+                            <div class="frm_view" style="width:100px;" id="ord_edit_plan_number"></div>
+                            <div style="clear:both;"></div>
+                        </div>
+                        <div class="frm_row" style="float:left;width:400px">
+                            <div class="frm_label">Plan Name:</div>
+                            <div class="frm_view" style="width:300px;" id="ord_edit_plan_name"></div>
+                            <div style="clear:both;"></div>
+                        </div>
+                         <div class="frm_row" style="float:left;width:370px;">
+                            <div class="frm_label">Elevation:</div>
+                            <div class="frm_view" style="width:100px;" id="ord_edit_elevation"></div>
+                            <div style="clear:both;"></div>
+                        </div>
+                        <div style="clear:both"></div>
+                    </div>
+                    <div style="height:40px;"></div>
+                    <div class="frm_row">
+                        <div class="frm_label" style="width:160px;">Garage Type:</div>
+                        <div class="frm_view" style="width:800px;">
+                            <div style="width:150px;float:left;" id="ord_edit_garage">
+                            </div>
+                            <div style="width:400px;float:left;" id="ord_edit_garage_options">
+                            </div>
+                        </div>
+                        <div style="clear:both;"></div>
+                    </div>
+                    <div class="frm_row">
+                        <div class="frm_label" style="width:160px;">Patio:</div>
+                        <div class="frm_view" style="width:800px;">
+                            &nbsp;&nbsp;&nbsp;
+                            <div style="width:150px;float:left;" id="ord_edit_patio">
+                            </div>
+                            <div style="width:400px;float:left;" id="ord_edit_patio_options">
+                            </div>
+                            <div style="clear:both"></div>
+                        </div>
+                        <div style="clear:both;"></div>
+                    </div>
+                    <div class="frm_row">
+                        <div class="frm_label" style="width:160px;">Masonry Sides:</div>
+                        <div class="frm_view" style="width:800px;" id="ord_edit_masonry">
+                        </div>
+                        <div style="clear:both;"></div>
+                    </div>
+                    <div style="height:40px;"></div>
+                    <div class="frm_row">
+                        <div class="frm_label">Additional Features:</div>
+                        <div class="frm_view" id="ord_edit_comments">
+                        </div>
+                        <div style="clear:both;"></div>
+                    </div>
+                    <div style="height:40px;"></div>
+                    <div class="frm_row">
+                        <div style="float:left;">
+                                <div class="frm_label" style="width:140px;">Soils Data Source:</div>
+                                <div class="frm_view" style="width:300px;" id="ord_edit_soils_data_source"></div>
+                                <div style="clear:both;"></div>
+                        </div>
+                        <div style="float:left;">
+                                <div class="frm_label" style="width:80px;">Slab Sq Ft:</div>
+                                <div class="frm_view" style="width:70px;" id="ord_edit_slab_sq_ft"></div>
+                                <div style="clear:both;"></div>
+                        </div>
+                        <div style="clear:both"></div>
+                      </div>
+                    <div style="height:10px;"></div>
+                    <div class="frm_row">
+                         <div style="float:left;width:170px;">
+                            <div class="frm_label" style="width:100px;">Fill Approved:</div>
+                            <div class="frm_view" style="width:70px;" id="ord_edit_fill_approved"></div>
+                            <div style="clear:both;"></div>
+                        </div>
+                        <div style="float:left;width:200px;">
+                            <div class="frm_label" style="width:100px;">Fill Depth:</div>
+                            <div class="frm_view" style="width:70px;" id="ord_edit_fill_depth"></div>
+                            <div style="clear:both;"></div>
+                        </div>
+                        <div style="clear:both"></div>
+                    </div>
+                    <div class="frm_row">
+                        <div style="float:left;width:170px;">
+                            <div class="frm_label" style="width:60px;">PI:</div>
+                            <div class="frm_view" style="width:70px;" id="ord_edit_pi"></div>
+                            <div style="clear:both;"></div>
+                        </div>
+
+                        <div style="float:left;width:170px;">
+                            <div class="frm_label" style="width:80px;">Slope:</div>
+                            <div class="frm_view" style="width:70px;" id="ord_edit_slope" ></div>
+                            <div style="clear:both;"></div>
+                        </div>
+                        <div style="float:left;width:170px;">
+                            <div class="frm_label" style="width:80px;">Brg cap:</div>
+                            <div class="frm_view" style="width:70px;" id="ord_edit_brg_cap"></div>
+                            <div style="clear:both;"></div>
+                        </div>
+                        <div style="clear:both;"></div>
+                    </div>
+                    <div >
+                        <div class="frm_row" style="float:left;width:170px;">
+                            <div class="frm_label" style="width:60px;">Em ctr:</div>
+                            <div class="frm_view" style="width:70px;" id="ord_edit_em_ctr"></div>
+                            <div style="clear:both;"></div>
+                        </div>
+                        <div class="frm_row" style="float:left;width:170px;">
+                            <div class="frm_label" style="width:80px;">Em edg:</div>
+                            <div class="frm_view" style="width:70px;" id="ord_edit_em_edg"></div>
+                            <div style="clear:both;"></div>
+                        </div>
+                        <div class="frm_row" style="float:left;width:170px;">
+                            <div class="frm_label" style="width:80px;">Ym ctr:</div>
+                            <div class="frm_view" style="width:70px;" id="ord_edit_ym_ctr"></div>
+                            <div style="clear:both;"></div>
+                        </div>
+                        <div class="frm_row" style="float:left;width:170px;">
+                            <div class="frm_label" style="width:80px;">Ym edg:</div>
+                            <div class="frm_view" style="width:70px;" id="ord_edit_ym_edg"></div>
+                            <div style="clear:both;"></div>
+                        </div>
+                        <div style="clear:both"></div>
+                    </div>
+                    <div style="height:40px;"></div>
+                    <div class="frm_row">
+                        <div class="frm_label">Comments:</div>
+                        <div class="frm_view" id="ord_edit_soils_comments"></div>
+                        <div style="clear:both;"></div>
+                    </div>
+                    <div style="height:40px;"></div>
+
+                    <div style="height:40px;"></div>
+            </div>
+    <div style="position:fixed;height:100%;right:0px;top:60px;background:#eeeeee;text-align:left;">
+                    <div style="margin-top:20px;font-size:24px;font-weight:600;margin-left:10px;">
+                        ORDER HISTORY
+                    </div>
+                    <div style="height:500px;overflow:scroll;width:260px;margin-left:10px;" id="ord_history">
+                       
+                    </div>
+
+            </div>
+</div>

@@ -1,0 +1,1867 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F9476461-D151-4670-AB09-2B536755F7EB}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MLAW_Portal</RootNamespace>
+    <AssemblyName>MLAW_Portal</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DocumentFormat.OpenXml">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.5\lib\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="Ghostscript.NET, Version=1.2.0.0, Culture=neutral, PublicKeyToken=f85051de34525b59, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Ghostscript.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="PdfSharp, Version=1.32.3057.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp.1.32.3057.0\lib\net20\PdfSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PdfSharp.Charting, Version=1.32.3057.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp.1.32.3057.0\lib\net20\PdfSharp.Charting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Tesseract, Version=2.3.0.0, Culture=neutral, PublicKeyToken=ebeb3d86bef60cbe, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Tesseract.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AccountingPortal\Accounting.js" />
+    <Content Include="AccountingPortal\Accounting_Administration.aspx" />
+    <Content Include="AccountingPortal\Accounting_Default.aspx" />
+    <Content Include="AccountingPortal\Accounting_Inspections.aspx" />
+    <Content Include="AccountingPortal\Create_Invoice.aspx" />
+    <Content Include="AccountingPortal\Delete_Client_Foundation_Pricing.aspx" />
+    <Content Include="AccountingPortal\Delete_Client_Inspection_Pricing.aspx" />
+    <Content Include="AccountingPortal\Insert_Client_Foundation_Pricing.aspx" />
+    <Content Include="AccountingPortal\Insert_Client_Inspection_Pricing.aspx" />
+    <Content Include="AccountingPortal\Insert_Warranty_Order.aspx" />
+    <Content Include="AccountingPortal\output_excel_accounting.aspx" />
+    <Content Include="AccountingPortal\Update_Warranty_Order.aspx" />
+    <Content Include="AccountingPortal\Warranties.aspx" />
+    <Content Include="Administration.aspx" />
+    <Content Include="MiddleTier\Assign_Order.aspx" />
+    <Content Include="bin\Ghostscript.NET.dll" />
+    <Content Include="bin\Ghostscript.NET.xml" />
+    <Content Include="bin\itextsharp.dll" />
+    <Content Include="bin\itextsharp.xml" />
+    <Content Include="bin\Tesseract.dll" />
+    <Content Include="bin\Tesseract.xml" />
+    <Content Include="bin\x64\liblept168.dll" />
+    <Content Include="bin\x64\libtesseract302.dll" />
+    <Content Include="bin\x86\liblept168.dll" />
+    <Content Include="bin\x86\libtesseract302.dll" />
+    <Content Include="Charting\CHRT_designer_open_orders.aspx" />
+    <Content Include="Charting\CHRT_Get_Completed_Orders.aspx" />
+    <Content Include="Charting\CHRT_open_orders.aspx" />
+    <Content Include="Charting\CHRT_Status_Open_Orders.aspx" />
+    <Content Include="Charting\Get_Completed_Orders.aspx" />
+    <Content Include="CustomerPortal\Customer_Default.aspx" />
+    <Content Include="CustomerPortal\Get_Customer_Quick_Search.aspx" />
+    <Content Include="d3.html" />
+    <Content Include="Dashboard.aspx" />
+    <Content Include="data_dump.aspx" />
+    <Content Include="default.aspx" />
+    <Content Include="MiddleTier\Delete_Order.aspx" />
+    <Content Include="DeliveryPortal\Delivery_Default.aspx" />
+    <Content Include="DesignerPortal\Designer_Default.aspx" />
+    <Content Include="DesignerPortal\Get_Unassigned_Orders.aspx" />
+    <Content Include="DesignerPortal\Get_User_Orders.aspx" />
+    <Content Include="DesignerPortal\Update_For_Designer.aspx" />
+    <Content Include="display_file.aspx" />
+    <Content Include="MiddleTier\Do_Quick_Search.aspx" />
+    <Content Include="error.html" />
+    <Content Include="filedrag.js" />
+    <Content Include="MiddleTier\Find_MLAW_Number.aspx" />
+    <Content Include="flare.txt" />
+    <Content Include="FoundationQAPortal\QA_Default.aspx" />
+    <Content Include="MiddleTier\GetClientSubdivisions.aspx" />
+    <Content Include="MiddleTier\Get_Active_Clients.aspx" />
+    <Content Include="MiddleTier\Get_Active_Subdivisions.aspx" />
+    <Content Include="MiddleTier\Get_All_inspection_Types.aspx" />
+    <Content Include="MiddleTier\Get_All_Subdivisions.aspx" />
+    <Content Include="MiddleTier\Get_Clients.aspx" />
+    <Content Include="MiddleTier\Get_Client_By_Id.aspx" />
+    <Content Include="MiddleTier\Get_Client_By_Name.aspx" />
+    <Content Include="MiddleTier\Get_Client_Delivery_Emails.aspx" />
+    <Content Include="MiddleTier\Get_Client_Foundation_Pricing.aspx" />
+    <Content Include="MiddleTier\Get_Client_Foundation_Revision_Pricing.aspx" />
+    <Content Include="MiddleTier\Get_Client_Inspection_Pricing.aspx" />
+    <Content Include="CustomerPortal\Get_Client_Orders.aspx" />
+    <Content Include="MiddleTier\Get_Client_Portal_Login.aspx" />
+    <Content Include="MiddleTier\Get_Divisions.aspx" />
+    <Content Include="MiddleTier\Get_Foundation_Designers.aspx" />
+    <Content Include="MiddleTier\Get_Foundation_Order_Price.aspx" />
+    <Content Include="MiddleTier\Get_Foundation_Statuses.aspx" />
+    <Content Include="MiddleTier\Get_Inspection_Types.aspx" />
+    <Content Include="MiddleTier\Get_Open_Orders.aspx" />
+    <Content Include="MiddleTier\Get_Open_Revisions.aspx" />
+    <Content Include="MiddleTier\Get_Orders_By_Status.aspx" />
+    <Content Include="MiddleTier\Get_Order_Files.aspx" />
+    <Content Include="MiddleTier\Get_Order_History.aspx" />
+    <Content Include="MiddleTier\Get_Order_Info.aspx" />
+    <Content Include="MiddleTier\Get_Order_Info_By_MLAW_Number.aspx" />
+    <Content Include="MiddleTier\Get_Order_Revisions.aspx" />
+    <Content Include="MiddleTier\Get_Order_Slice.aspx" />
+    <Content Include="MiddleTier\Get_Warranty_Order_Slice.aspx" />
+    <Content Include="html\create_foundation_order.html" />
+    <Content Include="html\create_inspection_order.html" />
+    <Content Include="html\create_revision_order.html" />
+    <Content Include="html\edit_foundation_order.html" />
+    <Content Include="html\edit_inspection_order.html" />
+    <Content Include="html\edit_revision_order.html" />
+    <Content Include="html\quick_view_foundation_order.html" />
+    <Content Include="html\view_foundation_order.html" />
+    <Content Include="Images\add_white.png" />
+    <Content Include="Images\close.png" />
+    <Content Include="Images\dashboard.png" />
+    <Content Include="Images\excel_white.png" />
+    <Content Include="Images\filter_white.png" />
+    <Content Include="Images\gear.png" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\mlaw_white.png" />
+    <Content Include="Images\Plus.png" />
+    <Content Include="Images\search.png" />
+    <Content Include="Images\white_down_arrow.png" />
+    <Content Include="Images\white_search.png" />
+    <Content Include="index.aspx" />
+    <Content Include="MiddleTier\Insert_Client.aspx" />
+    <Content Include="MiddleTier\Insert_Order.aspx" />
+    <Content Include="MiddleTier\Insert_Revision.aspx" />
+    <Content Include="MiddleTier\Insert_Subdivision.aspx" />
+    <Content Include="Insert_Vision_Order.aspx" />
+    <Content Include="inspections.js" />
+    <Content Include="Inspection_Portal\Delete_Inspector_Inspection_Types.aspx" />
+    <Content Include="Inspection_Portal\Get_All_Inspectors.aspx" />
+    <Content Include="Inspection_Portal\Get_Daily_Inspection_Schedule.aspx" />
+    <Content Include="Inspection_Portal\Get_Inspection_Completed_Orders.aspx" />
+    <Content Include="Inspection_Portal\Get_Inspection_Order.aspx" />
+    <Content Include="Inspection_Portal\Get_Inspection_Order_Slice.aspx" />
+    <Content Include="Inspection_Portal\Get_Inspector_Info.aspx" />
+    <Content Include="Inspection_Portal\Get_Inspector_Inspection_Types.aspx" />
+    <Content Include="Inspection_Portal\html\Prepour_Form.html" />
+    <Content Include="Inspection_Portal\Insert_Inspection_Order.aspx" />
+    <Content Include="Inspection_Portal\Insert_Inspector.aspx" />
+    <Content Include="Inspection_Portal\Insert_Inspector_Inspection_Types.aspx" />
+    <Content Include="Inspection_Portal\Inspections.js" />
+    <Content Include="Inspection_Portal\Inspection_Administration.aspx" />
+    <Content Include="Inspection_Portal\Inspection_Default.aspx" />
+    <Content Include="Inspection_Portal\Render_Inspection_Form.aspx" />
+    <Content Include="Inspection_Portal\Route_Calculation.aspx" />
+    <Content Include="Inspection_Portal\Update_Inspection_Order.aspx" />
+    <Content Include="Inspection_Portal\Update_Inspection_Type.aspx" />
+    <Content Include="Inspection_Portal\Update_Inspector.aspx" />
+    <Content Include="js\api\css\font-awesome.css" />
+    <Content Include="js\api\css\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="js\api\css\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="js\api\css\jquery-ui.css" />
+    <Content Include="js\api\css\ref.css" />
+    <Content Include="js\api\highcharts.html" />
+    <Content Include="js\api\images\apple-touch-icon-114x114.png" />
+    <Content Include="js\api\images\apple-touch-icon-120x120.png" />
+    <Content Include="js\api\images\apple-touch-icon-144x144.png" />
+    <Content Include="js\api\images\apple-touch-icon-152x152.png" />
+    <Content Include="js\api\images\apple-touch-icon-180x180.png" />
+    <Content Include="js\api\images\apple-touch-icon-57x57.png" />
+    <Content Include="js\api\images\apple-touch-icon-60x60.png" />
+    <Content Include="js\api\images\apple-touch-icon-72x72.png" />
+    <Content Include="js\api\images\apple-touch-icon-76x76.png" />
+    <Content Include="js\api\images\favicon-160x160.png" />
+    <Content Include="js\api\images\favicon-16x16.png" />
+    <Content Include="js\api\images\favicon-192x192.png" />
+    <Content Include="js\api\images\favicon-32x32.png" />
+    <Content Include="js\api\images\favicon-96x96.png" />
+    <Content Include="js\api\images\Highcharts.svg" />
+    <Content Include="js\api\images\splash.svg" />
+    <Content Include="js\api\images\sprite.png" />
+    <Content Include="js\api\js\jquery-ui.min.js" />
+    <Content Include="js\api\js\jquery.min.js" />
+    <Content Include="js\api\js\ref.js" />
+    <Content Include="js\charting.js" />
+    <Content Include="js\d3.js" />
+    <Content Include="js\d3.min.js" />
+    <Content Include="js\examples\3d-column-interactive\index.htm" />
+    <Content Include="js\examples\3d-column-null-values\index.htm" />
+    <Content Include="js\examples\3d-column-stacking-grouping\index.htm" />
+    <Content Include="js\examples\3d-pie-donut\index.htm" />
+    <Content Include="js\examples\3d-pie\index.htm" />
+    <Content Include="js\examples\3d-scatter-draggable\index.htm" />
+    <Content Include="js\examples\area-basic\index.htm" />
+    <Content Include="js\examples\area-inverted\index.htm" />
+    <Content Include="js\examples\area-missing\index.htm" />
+    <Content Include="js\examples\area-negative\index.htm" />
+    <Content Include="js\examples\area-stacked-percent\index.htm" />
+    <Content Include="js\examples\area-stacked\index.htm" />
+    <Content Include="js\examples\arearange-line\index.htm" />
+    <Content Include="js\examples\arearange\index.htm" />
+    <Content Include="js\examples\areaspline\index.htm" />
+    <Content Include="js\examples\bar-basic\index.htm" />
+    <Content Include="js\examples\bar-negative-stack\index.htm" />
+    <Content Include="js\examples\bar-stacked\index.htm" />
+    <Content Include="js\examples\box-plot\index.htm" />
+    <Content Include="js\examples\bubble-3d\index.htm" />
+    <Content Include="js\examples\bubble\index.htm" />
+    <Content Include="js\examples\column-basic\index.htm" />
+    <Content Include="js\examples\column-drilldown\index.htm" />
+    <Content Include="js\examples\column-negative\index.htm" />
+    <Content Include="js\examples\column-parsed\index.htm" />
+    <Content Include="js\examples\column-placement\index.htm" />
+    <Content Include="js\examples\column-rotated-labels\index.htm" />
+    <Content Include="js\examples\column-stacked-and-grouped\index.htm" />
+    <Content Include="js\examples\column-stacked-percent\index.htm" />
+    <Content Include="js\examples\column-stacked\index.htm" />
+    <Content Include="js\examples\columnrange\index.htm" />
+    <Content Include="js\examples\combo-dual-axes\index.htm" />
+    <Content Include="js\examples\combo-meteogram\index.htm" />
+    <Content Include="js\examples\combo-multi-axes\index.htm" />
+    <Content Include="js\examples\combo-regression\index.htm" />
+    <Content Include="js\examples\combo-timeline\index.htm" />
+    <Content Include="js\examples\combo\index.htm" />
+    <Content Include="js\examples\dynamic-click-to-add\index.htm" />
+    <Content Include="js\examples\dynamic-master-detail\index.htm" />
+    <Content Include="js\examples\dynamic-update\index.htm" />
+    <Content Include="js\examples\error-bar\index.htm" />
+    <Content Include="js\examples\funnel\index.htm" />
+    <Content Include="js\examples\gauge-clock\index.htm" />
+    <Content Include="js\examples\gauge-dual\index.htm" />
+    <Content Include="js\examples\gauge-solid\index.htm" />
+    <Content Include="js\examples\gauge-speedometer\index.htm" />
+    <Content Include="js\examples\gauge-vu-meter\index.htm" />
+    <Content Include="js\examples\heatmap-canvas\index.htm" />
+    <Content Include="js\examples\heatmap\index.htm" />
+    <Content Include="js\examples\line-ajax\index.htm" />
+    <Content Include="js\examples\line-basic\index.htm" />
+    <Content Include="js\examples\line-labels\index.htm" />
+    <Content Include="js\examples\line-log-axis\index.htm" />
+    <Content Include="js\examples\line-time-series\index.htm" />
+    <Content Include="js\examples\pie-basic\index.htm" />
+    <Content Include="js\examples\pie-donut\index.htm" />
+    <Content Include="js\examples\pie-drilldown\index.htm" />
+    <Content Include="js\examples\pie-gradient\index.htm" />
+    <Content Include="js\examples\pie-legend\index.htm" />
+    <Content Include="js\examples\pie-monochrome\index.htm" />
+    <Content Include="js\examples\pie-semi-circle\index.htm" />
+    <Content Include="js\examples\polar-spider\index.htm" />
+    <Content Include="js\examples\polar-wind-rose\index.htm" />
+    <Content Include="js\examples\polar\index.htm" />
+    <Content Include="js\examples\polygon\index.htm" />
+    <Content Include="js\examples\pyramid\index.htm" />
+    <Content Include="js\examples\renderer\index.htm" />
+    <Content Include="js\examples\scatter\index.htm" />
+    <Content Include="js\examples\sparkline\index.htm" />
+    <Content Include="js\examples\spline-inverted\index.htm" />
+    <Content Include="js\examples\spline-irregular-time\index.htm" />
+    <Content Include="js\examples\spline-plot-bands\index.htm" />
+    <Content Include="js\examples\spline-symbols\index.htm" />
+    <Content Include="js\examples\treemap-coloraxis\index.htm" />
+    <Content Include="js\examples\treemap-large-dataset\index.htm" />
+    <Content Include="js\examples\treemap-with-levels\index.htm" />
+    <Content Include="js\examples\waterfall\index.htm" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\pom.xml" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\converter\SVGConverter.java" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\converter\SVGConverterException.java" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\pool\AbstractPool.java" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\pool\BlockingQueuePool.java" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\pool\ObjectFactory.java" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\pool\ObjectPool.java" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\pool\PoolException.java" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\pool\ServerObjectFactory.java" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\server\Server.java" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\server\ServerState.java" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\server\TimeOut.java" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\util\MimeType.java" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\util\TempDir.java" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\phantomjs\broken-axis.js" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\phantomjs\data.js" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\phantomjs\drilldown.js" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\phantomjs\funnel.js" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\phantomjs\heatmap.js" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\phantomjs\highcharts-3d.js" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\phantomjs\highcharts-convert.js" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\phantomjs\highcharts-more.js" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\phantomjs\highcharts.js" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\phantomjs\jquery.1.9.1.min.js" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\phantomjs\map.js" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\phantomjs\no-data-to-display.js" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\phantomjs\solid-gauge.js" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\phantomjs\treemap.js" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\spring-convert.xml" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\phantomjs\broken-axis.js" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\phantomjs\data.js" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\phantomjs\drilldown.js" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\phantomjs\funnel.js" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\phantomjs\heatmap.js" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\phantomjs\highcharts-3d.js" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\phantomjs\highcharts-convert.js" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\phantomjs\highcharts-more.js" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\phantomjs\highcharts.js" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\phantomjs\highstock.js" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\phantomjs\jquery.1.9.1.min.js" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\phantomjs\map.js" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\phantomjs\no-data-to-display.js" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\phantomjs\solid-gauge.js" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\phantomjs\treemap.js" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\spring-convert.xml" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\target\highcharts-export-convert.jar" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\pom.xml" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\src\main\java\com\highcharts\export\controller\ExportController.java" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\src\main\java\com\highcharts\export\controller\ZeroRequestParameterException.java" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\src\main\java\com\highcharts\export\filter\CorsFilter.java" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\src\main\java\com\highcharts\export\interceptor\RequestInterceptor.java" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\src\main\java\com\highcharts\export\service\MonitorService.java" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\META-INF\context.xml" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\css\codemirror.css" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\css\demo.css" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\Highcharts-icon-160px.png" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\js\codemirror-compressed.js" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\js\jquery-1.11.0.min.js" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\WEB-INF\jspf\callback.js" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\WEB-INF\jspf\config.js" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\WEB-INF\jspf\lexl.svg" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\WEB-INF\spring\export-servlet.xml" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\WEB-INF\spring\spring-context.xml" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\WEB-INF\web.xml" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\META-INF\context.xml" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\css\codemirror.css" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\css\demo.css" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\Highcharts-icon-160px.png" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\js\codemirror-compressed.js" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\js\jquery-1.11.0.min.js" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\jspf\callback.js" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\jspf\config.js" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\jspf\lexl.svg" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\antisamy-1.4.3.jar" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\aopalliance-1.0.jar" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\batik-css-1.7.jar" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\batik-ext-1.7.jar" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\batik-util-1.7.jar" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\bsh-core-2.0b4.jar" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\commons-beanutils-1.7.0.jar" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\commons-beanutils-core-1.7.0.jar" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\commons-codec-1.9.jar" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\commons-collections-3.2.jar" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\commons-configuration-1.5.jar" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\commons-digester-1.8.jar" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\commons-fileupload-1.2.2.jar" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\commons-httpclient-3.1.jar" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\commons-io-2.4.jar" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\commons-lang-2.6.jar" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\commons-logging-1.1.3.jar" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\esapi-2.1.0.jar" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\gson-2.2.2.jar" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\highcharts-export-convert-2.1.0.jar" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\jsoup-1.8.1.jar" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\log4j-1.2.17.jar" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\nekohtml-1.9.12.jar" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\spring-aop-4.1.2.RELEASE.jar" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\spring-beans-4.1.2.RELEASE.jar" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\spring-context-4.1.2.RELEASE.jar" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\spring-core-4.1.2.RELEASE.jar" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\spring-expression-4.1.2.RELEASE.jar" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\spring-web-4.1.2.RELEASE.jar" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\spring-webmvc-4.1.2.RELEASE.jar" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\standard-1.1.2.jar" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\xalan-2.7.0.jar" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\xercesImpl-2.8.0.jar" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\xml-apis-1.3.03.jar" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\xml-apis-ext-1.3.04.jar" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\xom-1.2.5.jar" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\spring\export-servlet.xml" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\spring\spring-context.xml" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\web.xml" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\tmp\jsp\org\apache\jsp\WEB_002dINF\pages\demo_jsp.java" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\tmp\jsp\org\apache\jsp\WEB_002dINF\pages\error_jsp.java" />
+    <Content Include="js\exporting-server\java\highcharts-export\pom.xml" />
+    <Content Include="js\exporting-server\java\LICENSE.txt" />
+    <Content Include="js\exporting-server\phantomjs\broken-axis.js" />
+    <Content Include="js\exporting-server\phantomjs\data.js" />
+    <Content Include="js\exporting-server\phantomjs\drilldown.js" />
+    <Content Include="js\exporting-server\phantomjs\funnel.js" />
+    <Content Include="js\exporting-server\phantomjs\heatmap.js" />
+    <Content Include="js\exporting-server\phantomjs\highcharts-3d.js" />
+    <Content Include="js\exporting-server\phantomjs\highcharts-convert.js" />
+    <Content Include="js\exporting-server\phantomjs\highcharts-more.js" />
+    <Content Include="js\exporting-server\phantomjs\highcharts.js" />
+    <Content Include="js\exporting-server\phantomjs\jquery.1.9.1.min.js" />
+    <Content Include="js\exporting-server\phantomjs\map.js" />
+    <Content Include="js\exporting-server\phantomjs\no-data-to-display.js" />
+    <Content Include="js\exporting-server\phantomjs\solid-gauge.js" />
+    <Content Include="js\exporting-server\phantomjs\treemap.js" />
+    <Content Include="js\gfx\vml-radial-gradient.png" />
+    <Content Include="js\graphics\meteogram-symbols-30px.png" />
+    <Content Include="js\graphics\skies.jpg" />
+    <Content Include="js\graphics\snow.png" />
+    <Content Include="js\graphics\sun.png" />
+    <Content Include="js\index.htm" />
+    <Content Include="js\js\adapters\standalone-framework.js" />
+    <Content Include="js\js\adapters\standalone-framework.src.js" />
+    <Content Include="js\js\highcharts-3d.js" />
+    <Content Include="js\js\highcharts-3d.src.js" />
+    <Content Include="js\js\highcharts-more.js" />
+    <Content Include="js\js\highcharts-more.src.js" />
+    <Content Include="js\js\highcharts.js" />
+    <Content Include="js\js\highcharts.src.js" />
+    <Content Include="js\js\modules\broken-axis.js" />
+    <Content Include="js\js\modules\broken-axis.src.js" />
+    <Content Include="js\js\modules\canvas-tools.js" />
+    <Content Include="js\js\modules\canvas-tools.src.js" />
+    <Content Include="js\js\modules\data.js" />
+    <Content Include="js\js\modules\data.src.js" />
+    <Content Include="js\js\modules\drilldown.js" />
+    <Content Include="js\js\modules\drilldown.src.js" />
+    <Content Include="js\js\modules\exporting.js" />
+    <Content Include="js\js\modules\exporting.src.js" />
+    <Content Include="js\js\modules\funnel.js" />
+    <Content Include="js\js\modules\funnel.src.js" />
+    <Content Include="js\js\modules\heatmap.js" />
+    <Content Include="js\js\modules\heatmap.src.js" />
+    <Content Include="js\js\modules\no-data-to-display.js" />
+    <Content Include="js\js\modules\no-data-to-display.src.js" />
+    <Content Include="js\js\modules\solid-gauge.js" />
+    <Content Include="js\js\modules\solid-gauge.src.js" />
+    <Content Include="js\js\modules\treemap.js" />
+    <Content Include="js\js\modules\treemap.src.js" />
+    <Content Include="js\js\themes\dark-blue.js" />
+    <Content Include="js\js\themes\dark-green.js" />
+    <Content Include="js\js\themes\dark-unica.js" />
+    <Content Include="js\js\themes\gray.js" />
+    <Content Include="js\js\themes\grid-light.js" />
+    <Content Include="js\js\themes\grid.js" />
+    <Content Include="js\js\themes\sand-signika.js" />
+    <Content Include="js\js\themes\skies.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="MiddleTier\Add_Client_Delivery_Email.aspx" />
+    <Content Include="MLAW.css" />
+    <Content Include="MLAW.js" />
+    <Content Include="MiddleTier\orders_excel.aspx" />
+    <Content Include="MiddleTier\Order_By_MLAW_Number.aspx" />
+    <Content Include="process_form.aspx" />
+    <Content Include="MiddleTier\Remove_Client_Delivery_Mail.aspx" />
+    <Content Include="Service References\ServiceReference1\configuration91.svcinfo" />
+    <Content Include="Service References\ServiceReference1\configuration.svcinfo" />
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.AddActivityResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.AddAPDisbursementsTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.AddAPVouchersTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.AddCampaignResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.AddCashDisbTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.AddCashReceiptsTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.AddClientResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.AddContactResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.AddEmpExpenseTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.AddEmployeeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.AddEmpRepaymentTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.AddInvoiceTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.AddJournalEntryTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.AddLaborAdjustTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.AddLeadResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.AddMiscTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.AddOpportunityResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.AddPrintsReproTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.AddProjectResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.AddTextLibraryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.AddTimesheetTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.AddToPickListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.AddUDICResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.AddUnitByProjectTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.AddUnitTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.AddVendorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.DeleteActivityResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.DeleteAPDisbursementsTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.DeleteAPVouchersTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.DeleteCampaignResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.DeleteCashDisbTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.DeleteCashReceiptsTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.DeleteClientResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.DeleteContactResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.DeleteEmpExpenseTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.DeleteEmployeeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.DeleteEmpRepaymentTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.DeleteInvoiceTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.DeleteJournalEntryTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.DeleteLaborAdjustTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.DeleteLeadResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.DeleteMiscTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.DeleteOpportunityResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.DeletePrintsReproTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.DeleteProjectResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.DeleteRecordsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.DeleteTextLibraryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.DeleteTimesheetTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.DeleteUDICResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.DeleteUnitByProjectTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.DeleteUnitTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.DeleteVendorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.DownloadMetaDataFilesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.ExecuteStoredProcedureResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.GenerateCustomTabSchemaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.GetActivitiesByKeyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.GetActivitiesByQueryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.GetCampaignsByKeyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.GetCampaignsByQueryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.GetClientsByKeyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.GetClientsByQueryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.GetCMConnectorConfigResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.GetCMOCompatabilityInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.GetContactsByKeyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.GetContactsByQueryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.GetCurrentUserInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.GetDatabasesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.GetEmployeesByKeyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.GetEmployeesByQueryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.GetLeadsByKeyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.GetLeadsByQueryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.GetOpportunitiesByKeyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.GetOpportunitiesByQueryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.GetPickListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.GetProjectsByKeyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.GetProjectsByQueryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.GetRecordsByGUIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.GetRecordsByKeyDeepResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.GetRecordsByKeyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.GetRecordsByQueryDeepResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.GetRecordsByQueryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.GetSchemaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.GetSystemInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.GetTextLibrariesByKeyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.GetTextLibrariesByQueryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.GetTransactionByKeyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.GetTransactionByQueryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.GetUDICByKeyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.GetUDICByQueryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.GetVendorsByKeyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.GetVendorsByQueryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.MyTestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.PostTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.SendDataToDeltekVisionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.SendDataToDeltekVisionWithReturnResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.Timekeeper_CopyTimesheetResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.Timekeeper_DeleteTimesheetResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.Timekeeper_GetConfigurationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.Timekeeper_GetLoginUserInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.Timekeeper_GetPeriodsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.Timekeeper_GetProjectsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.Timekeeper_GetTimesheetResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.TransformXmlResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.UpdateActivityResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.UpdateAPDisbursementsTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.UpdateAPVouchersTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.UpdateCampaignResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.UpdateCashDisbTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.UpdateCashReceiptsTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.UpdateClientResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.UpdateContactResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.UpdateEmpExpenseTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.UpdateEmployeeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.UpdateEmpRepaymentTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.UpdateInvoiceTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.UpdateJournalEntryTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.UpdateLaborAdjustTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.UpdateLeadResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.UpdateMiscTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.UpdateOpportunityResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.UpdatePickListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.UpdatePrintsReproTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.UpdateProjectResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.UpdateTextLibraryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.UpdateTimesheetTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.UpdateUDICResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.UpdateUnitByProjectTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.UpdateUnitTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.UpdateVendorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.ValidateLoginResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.WebServiceTestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.WSTest_AddClientsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.WSTest_AddEmployeeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.WSTest_AddJETransResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.WSTest_AddLeadsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.WSTest_AddOpportunityResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.WSTest_AddProjectsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.WSTest_AddRecResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.WSTest_AddUnitsByProjectResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.WSTest_AddVendorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.WSTest_AddVouchersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.WSTest_APDisbursementsInsertResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.WSTest_APDisbursementsUpdateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.WSTest_APVouchersInsertResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.WSTest_APVouchersUpdateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.WSTest_CashReceiptsInsertResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.WSTest_DeleteLeadResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.WSTest_DeleteVouchersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.WSTest_ErrorAndReturnDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.WSTest_GetRecordsByKeyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.WSTest_GetRecordsByQueryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.WSTest_GetSchemaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.WSTest_GetTransactionByKeyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.WSTest_JCAllResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.WSTest_PostVouchersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.WSTest_SendDataToDeltekVisionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.WSTest_SendDataToDeltekVision_ProjectsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.WSTest_SuccessCallResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.WSTest_TGFixesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.WSTest_TransactionByQueryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.WSTest_UpdateClientsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.WSTest_UpdateCustomTabSchemaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.WSTest_UpdateEmployeeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.WSTest_UpdateLeadResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.WSTest_UpdateOpportunityResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.WSTest_UpdateProjectsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.WSTest_UpdateUnitsByProjectResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.WSTest_UpdateVendorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\MLAW_Portal.ServiceReference1.WSTest_WarningAndReturnDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <Content Include="MiddleTier\Update_Client.aspx" />
+    <Content Include="MiddleTier\Update_Client_Foundation_Revision_Pricing.aspx" />
+    <Content Include="MiddleTier\Update_Client_Is_Active.aspx" />
+    <Content Include="MiddleTier\Update_Client_Portal_Login.aspx" />
+    <Content Include="MiddleTier\Update_Order.aspx" />
+    <Content Include="MiddleTier\Update_Order_Status.aspx" />
+    <Content Include="MiddleTier\Update_Revision.aspx" />
+    <Content Include="upload_form.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountingPortal\Accounting_Administration.aspx.cs">
+      <DependentUpon>Accounting_Administration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccountingPortal\Accounting_Administration.aspx.designer.cs">
+      <DependentUpon>Accounting_Administration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AccountingPortal\Accounting_Default.aspx.cs">
+      <DependentUpon>Accounting_Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccountingPortal\Accounting_Default.aspx.designer.cs">
+      <DependentUpon>Accounting_Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AccountingPortal\Accounting_Inspections.aspx.cs">
+      <DependentUpon>Accounting_Inspections.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccountingPortal\Accounting_Inspections.aspx.designer.cs">
+      <DependentUpon>Accounting_Inspections.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AccountingPortal\Create_Invoice.aspx.cs">
+      <DependentUpon>Create_Invoice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccountingPortal\Create_Invoice.aspx.designer.cs">
+      <DependentUpon>Create_Invoice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AccountingPortal\Delete_Client_Foundation_Pricing.aspx.cs">
+      <DependentUpon>Delete_Client_Foundation_Pricing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccountingPortal\Delete_Client_Foundation_Pricing.aspx.designer.cs">
+      <DependentUpon>Delete_Client_Foundation_Pricing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AccountingPortal\Delete_Client_Inspection_Pricing.aspx.cs">
+      <DependentUpon>Delete_Client_Inspection_Pricing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccountingPortal\Delete_Client_Inspection_Pricing.aspx.designer.cs">
+      <DependentUpon>Delete_Client_Inspection_Pricing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AccountingPortal\Insert_Client_Foundation_Pricing.aspx.cs">
+      <DependentUpon>Insert_Client_Foundation_Pricing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccountingPortal\Insert_Client_Foundation_Pricing.aspx.designer.cs">
+      <DependentUpon>Insert_Client_Foundation_Pricing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AccountingPortal\Insert_Client_Inspection_Pricing.aspx.cs">
+      <DependentUpon>Insert_Client_Inspection_Pricing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccountingPortal\Insert_Client_Inspection_Pricing.aspx.designer.cs">
+      <DependentUpon>Insert_Client_Inspection_Pricing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AccountingPortal\Insert_Warranty_Order.aspx.cs">
+      <DependentUpon>Insert_Warranty_Order.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccountingPortal\Insert_Warranty_Order.aspx.designer.cs">
+      <DependentUpon>Insert_Warranty_Order.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AccountingPortal\output_excel_accounting.aspx.cs">
+      <DependentUpon>output_excel_accounting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccountingPortal\output_excel_accounting.aspx.designer.cs">
+      <DependentUpon>output_excel_accounting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AccountingPortal\Update_Warranty_Order.aspx.cs">
+      <DependentUpon>Update_Warranty_Order.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccountingPortal\Update_Warranty_Order.aspx.designer.cs">
+      <DependentUpon>Update_Warranty_Order.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AccountingPortal\Warranties.aspx.cs">
+      <DependentUpon>Warranties.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccountingPortal\Warranties.aspx.designer.cs">
+      <DependentUpon>Warranties.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration.aspx.cs">
+      <DependentUpon>Administration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration.aspx.designer.cs">
+      <DependentUpon>Administration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MiddleTier\Assign_Order.aspx.cs">
+      <DependentUpon>Assign_Order.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MiddleTier\Assign_Order.aspx.designer.cs">
+      <DependentUpon>Assign_Order.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Charting\CHRT_designer_open_orders.aspx.cs">
+      <DependentUpon>CHRT_designer_open_orders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Charting\CHRT_designer_open_orders.aspx.designer.cs">
+      <DependentUpon>CHRT_designer_open_orders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Charting\CHRT_Get_Completed_Orders.aspx.cs">
+      <DependentUpon>CHRT_Get_Completed_Orders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Charting\CHRT_Get_Completed_Orders.aspx.designer.cs">
+      <DependentUpon>CHRT_Get_Completed_Orders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Charting\CHRT_open_orders.aspx.cs">
+      <DependentUpon>CHRT_open_orders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Charting\CHRT_open_orders.aspx.designer.cs">
+      <DependentUpon>CHRT_open_orders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Charting\CHRT_Status_Open_Orders.aspx.cs">
+      <DependentUpon>CHRT_Status_Open_Orders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Charting\CHRT_Status_Open_Orders.aspx.designer.cs">
+      <DependentUpon>CHRT_Status_Open_Orders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Charting\Get_Completed_Orders.aspx.cs">
+      <DependentUpon>Get_Completed_Orders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Charting\Get_Completed_Orders.aspx.designer.cs">
+      <DependentUpon>Get_Completed_Orders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerPortal\Customer_Default.aspx.cs">
+      <DependentUpon>Customer_Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerPortal\Customer_Default.aspx.designer.cs">
+      <DependentUpon>Customer_Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerPortal\Get_Customer_Quick_Search.aspx.cs">
+      <DependentUpon>Get_Customer_Quick_Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerPortal\Get_Customer_Quick_Search.aspx.designer.cs">
+      <DependentUpon>Get_Customer_Quick_Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DAL.cs" />
+    <Compile Include="Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="data_dump.aspx.cs">
+      <DependentUpon>data_dump.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="data_dump.aspx.designer.cs">
+      <DependentUpon>data_dump.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MiddleTier\Delete_Order.aspx.cs">
+      <DependentUpon>Delete_Order.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MiddleTier\Delete_Order.aspx.designer.cs">
+      <DependentUpon>Delete_Order.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeliveryPortal\Delivery_Default.aspx.cs">
+      <DependentUpon>Delivery_Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeliveryPortal\Delivery_Default.aspx.designer.cs">
+      <DependentUpon>Delivery_Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DesignerPortal\Designer_Default.aspx.cs">
+      <DependentUpon>Designer_Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DesignerPortal\Designer_Default.aspx.designer.cs">
+      <DependentUpon>Designer_Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DesignerPortal\Get_Unassigned_Orders.aspx.cs">
+      <DependentUpon>Get_Unassigned_Orders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DesignerPortal\Get_Unassigned_Orders.aspx.designer.cs">
+      <DependentUpon>Get_Unassigned_Orders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DesignerPortal\Get_User_Orders.aspx.cs">
+      <DependentUpon>Get_User_Orders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DesignerPortal\Get_User_Orders.aspx.designer.cs">
+      <DependentUpon>Get_User_Orders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DesignerPortal\Update_For_Designer.aspx.cs">
+      <DependentUpon>Update_For_Designer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DesignerPortal\Update_For_Designer.aspx.designer.cs">
+      <DependentUpon>Update_For_Designer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="display_file.aspx.cs">
+      <DependentUpon>display_file.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="display_file.aspx.designer.cs">
+      <DependentUpon>display_file.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MiddleTier\Do_Quick_Search.aspx.cs">
+      <DependentUpon>Do_Quick_Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MiddleTier\Do_Quick_Search.aspx.designer.cs">
+      <DependentUpon>Do_Quick_Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MiddleTier\Find_MLAW_Number.aspx.cs">
+      <DependentUpon>Find_MLAW_Number.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MiddleTier\Find_MLAW_Number.aspx.designer.cs">
+      <DependentUpon>Find_MLAW_Number.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FoundationQAPortal\QA_Default.aspx.cs">
+      <DependentUpon>QA_Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FoundationQAPortal\QA_Default.aspx.designer.cs">
+      <DependentUpon>QA_Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MiddleTier\GetClientSubdivisions.aspx.cs">
+      <DependentUpon>GetClientSubdivisions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MiddleTier\GetClientSubdivisions.aspx.designer.cs">
+      <DependentUpon>GetClientSubdivisions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MiddleTier\Get_Active_Clients.aspx.cs">
+      <DependentUpon>Get_Active_Clients.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MiddleTier\Get_Active_Clients.aspx.designer.cs">
+      <DependentUpon>Get_Active_Clients.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MiddleTier\Get_Active_Subdivisions.aspx.cs">
+      <DependentUpon>Get_Active_Subdivisions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MiddleTier\Get_Active_Subdivisions.aspx.designer.cs">
+      <DependentUpon>Get_Active_Subdivisions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MiddleTier\Get_All_inspection_Types.aspx.cs">
+      <DependentUpon>Get_All_inspection_Types.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MiddleTier\Get_All_inspection_Types.aspx.designer.cs">
+      <DependentUpon>Get_All_inspection_Types.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MiddleTier\Get_All_Subdivisions.aspx.cs">
+      <DependentUpon>Get_All_Subdivisions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MiddleTier\Get_All_Subdivisions.aspx.designer.cs">
+      <DependentUpon>Get_All_Subdivisions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MiddleTier\Get_Clients.aspx.cs">
+      <DependentUpon>Get_Clients.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MiddleTier\Get_Clients.aspx.designer.cs">
+      <DependentUpon>Get_Clients.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MiddleTier\Get_Client_By_Id.aspx.cs">
+      <DependentUpon>Get_Client_By_Id.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MiddleTier\Get_Client_By_Id.aspx.designer.cs">
+      <DependentUpon>Get_Client_By_Id.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MiddleTier\Get_Client_By_Name.aspx.cs">
+      <DependentUpon>Get_Client_By_Name.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MiddleTier\Get_Client_By_Name.aspx.designer.cs">
+      <DependentUpon>Get_Client_By_Name.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MiddleTier\Get_Client_Delivery_Emails.aspx.cs">
+      <DependentUpon>Get_Client_Delivery_Emails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MiddleTier\Get_Client_Delivery_Emails.aspx.designer.cs">
+      <DependentUpon>Get_Client_Delivery_Emails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MiddleTier\Get_Client_Foundation_Pricing.aspx.cs">
+      <DependentUpon>Get_Client_Foundation_Pricing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MiddleTier\Get_Client_Foundation_Pricing.aspx.designer.cs">
+      <DependentUpon>Get_Client_Foundation_Pricing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MiddleTier\Get_Client_Foundation_Revision_Pricing.aspx.cs">
+      <DependentUpon>Get_Client_Foundation_Revision_Pricing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MiddleTier\Get_Client_Foundation_Revision_Pricing.aspx.designer.cs">
+      <DependentUpon>Get_Client_Foundation_Revision_Pricing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MiddleTier\Get_Client_Inspection_Pricing.aspx.cs">
+      <DependentUpon>Get_Client_Inspection_Pricing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MiddleTier\Get_Client_Inspection_Pricing.aspx.designer.cs">
+      <DependentUpon>Get_Client_Inspection_Pricing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerPortal\Get_Client_Orders.aspx.cs">
+      <DependentUpon>Get_Client_Orders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerPortal\Get_Client_Orders.aspx.designer.cs">
+      <DependentUpon>Get_Client_Orders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MiddleTier\Get_Client_Portal_Login.aspx.cs">
+      <DependentUpon>Get_Client_Portal_Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MiddleTier\Get_Client_Portal_Login.aspx.designer.cs">
+      <DependentUpon>Get_Client_Portal_Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MiddleTier\Get_Divisions.aspx.cs">
+      <DependentUpon>Get_Divisions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MiddleTier\Get_Divisions.aspx.designer.cs">
+      <DependentUpon>Get_Divisions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MiddleTier\Get_Foundation_Designers.aspx.cs">
+      <DependentUpon>Get_Foundation_Designers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MiddleTier\Get_Foundation_Designers.aspx.designer.cs">
+      <DependentUpon>Get_Foundation_Designers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MiddleTier\Get_Foundation_Order_Price.aspx.cs">
+      <DependentUpon>Get_Foundation_Order_Price.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MiddleTier\Get_Foundation_Order_Price.aspx.designer.cs">
+      <DependentUpon>Get_Foundation_Order_Price.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MiddleTier\Get_Foundation_Statuses.aspx.cs">
+      <DependentUpon>Get_Foundation_Statuses.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MiddleTier\Get_Foundation_Statuses.aspx.designer.cs">
+      <DependentUpon>Get_Foundation_Statuses.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MiddleTier\Get_Inspection_Types.aspx.cs">
+      <DependentUpon>Get_Inspection_Types.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MiddleTier\Get_Inspection_Types.aspx.designer.cs">
+      <DependentUpon>Get_Inspection_Types.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MiddleTier\Get_Open_Orders.aspx.cs">
+      <DependentUpon>Get_Open_Orders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MiddleTier\Get_Open_Orders.aspx.designer.cs">
+      <DependentUpon>Get_Open_Orders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MiddleTier\Get_Open_Revisions.aspx.cs">
+      <DependentUpon>Get_Open_Revisions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MiddleTier\Get_Open_Revisions.aspx.designer.cs">
+      <DependentUpon>Get_Open_Revisions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MiddleTier\Get_Orders_By_Status.aspx.cs">
+      <DependentUpon>Get_Orders_By_Status.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MiddleTier\Get_Orders_By_Status.aspx.designer.cs">
+      <DependentUpon>Get_Orders_By_Status.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MiddleTier\Get_Order_Files.aspx.cs">
+      <DependentUpon>Get_Order_Files.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MiddleTier\Get_Order_Files.aspx.designer.cs">
+      <DependentUpon>Get_Order_Files.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MiddleTier\Get_Order_History.aspx.cs">
+      <DependentUpon>Get_Order_History.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MiddleTier\Get_Order_History.aspx.designer.cs">
+      <DependentUpon>Get_Order_History.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MiddleTier\Get_Order_Info.aspx.cs">
+      <DependentUpon>Get_Order_Info.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MiddleTier\Get_Order_Info.aspx.designer.cs">
+      <DependentUpon>Get_Order_Info.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MiddleTier\Get_Order_Info_By_MLAW_Number.aspx.cs">
+      <DependentUpon>Get_Order_Info_By_MLAW_Number.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MiddleTier\Get_Order_Info_By_MLAW_Number.aspx.designer.cs">
+      <DependentUpon>Get_Order_Info_By_MLAW_Number.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MiddleTier\Get_Order_Revisions.aspx.cs">
+      <DependentUpon>Get_Order_Revisions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MiddleTier\Get_Order_Revisions.aspx.designer.cs">
+      <DependentUpon>Get_Order_Revisions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MiddleTier\Get_Order_Slice.aspx.cs">
+      <DependentUpon>Get_Order_Slice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MiddleTier\Get_Order_Slice.aspx.designer.cs">
+      <DependentUpon>Get_Order_Slice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MiddleTier\Get_Warranty_Order_Slice.aspx.cs">
+      <DependentUpon>Get_Warranty_Order_Slice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MiddleTier\Get_Warranty_Order_Slice.aspx.designer.cs">
+      <DependentUpon>Get_Warranty_Order_Slice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MiddleTier\Insert_Client.aspx.cs">
+      <DependentUpon>Insert_Client.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MiddleTier\Insert_Client.aspx.designer.cs">
+      <DependentUpon>Insert_Client.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MiddleTier\Insert_Order.aspx.cs">
+      <DependentUpon>Insert_Order.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MiddleTier\Insert_Order.aspx.designer.cs">
+      <DependentUpon>Insert_Order.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MiddleTier\Insert_Revision.aspx.cs">
+      <DependentUpon>Insert_Revision.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MiddleTier\Insert_Revision.aspx.designer.cs">
+      <DependentUpon>Insert_Revision.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MiddleTier\Insert_Subdivision.aspx.cs">
+      <DependentUpon>Insert_Subdivision.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MiddleTier\Insert_Subdivision.aspx.designer.cs">
+      <DependentUpon>Insert_Subdivision.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Insert_Vision_Order.aspx.cs">
+      <DependentUpon>Insert_Vision_Order.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Insert_Vision_Order.aspx.designer.cs">
+      <DependentUpon>Insert_Vision_Order.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inspection_Portal\Delete_Inspector_Inspection_Types.aspx.cs">
+      <DependentUpon>Delete_Inspector_Inspection_Types.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inspection_Portal\Delete_Inspector_Inspection_Types.aspx.designer.cs">
+      <DependentUpon>Delete_Inspector_Inspection_Types.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inspection_Portal\Get_All_Inspectors.aspx.cs">
+      <DependentUpon>Get_All_Inspectors.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inspection_Portal\Get_All_Inspectors.aspx.designer.cs">
+      <DependentUpon>Get_All_Inspectors.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inspection_Portal\Get_Daily_Inspection_Schedule.aspx.cs">
+      <DependentUpon>Get_Daily_Inspection_Schedule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inspection_Portal\Get_Daily_Inspection_Schedule.aspx.designer.cs">
+      <DependentUpon>Get_Daily_Inspection_Schedule.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inspection_Portal\Get_Inspection_Completed_Orders.aspx.cs">
+      <DependentUpon>Get_Inspection_Completed_Orders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inspection_Portal\Get_Inspection_Completed_Orders.aspx.designer.cs">
+      <DependentUpon>Get_Inspection_Completed_Orders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inspection_Portal\Get_Inspection_Order.aspx.cs">
+      <DependentUpon>Get_Inspection_Order.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inspection_Portal\Get_Inspection_Order.aspx.designer.cs">
+      <DependentUpon>Get_Inspection_Order.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inspection_Portal\Get_Inspection_Order_Slice.aspx.cs">
+      <DependentUpon>Get_Inspection_Order_Slice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inspection_Portal\Get_Inspection_Order_Slice.aspx.designer.cs">
+      <DependentUpon>Get_Inspection_Order_Slice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inspection_Portal\Get_Inspector_Info.aspx.cs">
+      <DependentUpon>Get_Inspector_Info.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inspection_Portal\Get_Inspector_Info.aspx.designer.cs">
+      <DependentUpon>Get_Inspector_Info.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inspection_Portal\Get_Inspector_Inspection_Types.aspx.cs">
+      <DependentUpon>Get_Inspector_Inspection_Types.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inspection_Portal\Get_Inspector_Inspection_Types.aspx.designer.cs">
+      <DependentUpon>Get_Inspector_Inspection_Types.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inspection_Portal\Insert_Inspection_Order.aspx.cs">
+      <DependentUpon>Insert_Inspection_Order.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inspection_Portal\Insert_Inspection_Order.aspx.designer.cs">
+      <DependentUpon>Insert_Inspection_Order.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inspection_Portal\Insert_Inspector.aspx.cs">
+      <DependentUpon>Insert_Inspector.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inspection_Portal\Insert_Inspector.aspx.designer.cs">
+      <DependentUpon>Insert_Inspector.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inspection_Portal\Insert_Inspector_Inspection_Types.aspx.cs">
+      <DependentUpon>Insert_Inspector_Inspection_Types.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inspection_Portal\Insert_Inspector_Inspection_Types.aspx.designer.cs">
+      <DependentUpon>Insert_Inspector_Inspection_Types.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inspection_Portal\Inspection_Administration.aspx.cs">
+      <DependentUpon>Inspection_Administration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inspection_Portal\Inspection_Administration.aspx.designer.cs">
+      <DependentUpon>Inspection_Administration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inspection_Portal\Inspection_Default.aspx.cs">
+      <DependentUpon>Inspection_Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inspection_Portal\Inspection_Default.aspx.designer.cs">
+      <DependentUpon>Inspection_Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inspection_Portal\Render_Inspection_Form.aspx.cs">
+      <DependentUpon>Render_Inspection_Form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inspection_Portal\Render_Inspection_Form.aspx.designer.cs">
+      <DependentUpon>Render_Inspection_Form.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inspection_Portal\Route_Calculation.aspx.cs">
+      <DependentUpon>Route_Calculation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inspection_Portal\Route_Calculation.aspx.designer.cs">
+      <DependentUpon>Route_Calculation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inspection_Portal\Update_Inspection_Order.aspx.cs">
+      <DependentUpon>Update_Inspection_Order.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inspection_Portal\Update_Inspection_Order.aspx.designer.cs">
+      <DependentUpon>Update_Inspection_Order.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inspection_Portal\Update_Inspection_Type.aspx.cs">
+      <DependentUpon>Update_Inspection_Type.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inspection_Portal\Update_Inspection_Type.aspx.designer.cs">
+      <DependentUpon>Update_Inspection_Type.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inspection_Portal\Update_Inspector.aspx.cs">
+      <DependentUpon>Update_Inspector.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inspection_Portal\Update_Inspector.aspx.designer.cs">
+      <DependentUpon>Update_Inspector.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MiddleTier\Add_Client_Delivery_Email.aspx.cs">
+      <DependentUpon>Add_Client_Delivery_Email.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MiddleTier\Add_Client_Delivery_Email.aspx.designer.cs">
+      <DependentUpon>Add_Client_Delivery_Email.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="MiddleTier\orders_excel.aspx.cs">
+      <DependentUpon>orders_excel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MiddleTier\orders_excel.aspx.designer.cs">
+      <DependentUpon>orders_excel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MiddleTier\Order_By_MLAW_Number.aspx.cs">
+      <DependentUpon>Order_By_MLAW_Number.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MiddleTier\Order_By_MLAW_Number.aspx.designer.cs">
+      <DependentUpon>Order_By_MLAW_Number.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="process_form.aspx.cs">
+      <DependentUpon>process_form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="process_form.aspx.designer.cs">
+      <DependentUpon>process_form.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MiddleTier\Remove_Client_Delivery_Mail.aspx.cs">
+      <DependentUpon>Remove_Client_Delivery_Mail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MiddleTier\Remove_Client_Delivery_Mail.aspx.designer.cs">
+      <DependentUpon>Remove_Client_Delivery_Mail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceReference1\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="TopToBottomExtractor.cs" />
+    <Compile Include="MiddleTier\Update_Client.aspx.cs">
+      <DependentUpon>Update_Client.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MiddleTier\Update_Client.aspx.designer.cs">
+      <DependentUpon>Update_Client.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MiddleTier\Update_Client_Foundation_Revision_Pricing.aspx.cs">
+      <DependentUpon>Update_Client_Foundation_Revision_Pricing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MiddleTier\Update_Client_Foundation_Revision_Pricing.aspx.designer.cs">
+      <DependentUpon>Update_Client_Foundation_Revision_Pricing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MiddleTier\Update_Client_Is_Active.aspx.cs">
+      <DependentUpon>Update_Client_Is_Active.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MiddleTier\Update_Client_Is_Active.aspx.designer.cs">
+      <DependentUpon>Update_Client_Is_Active.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MiddleTier\Update_Client_Portal_Login.aspx.cs">
+      <DependentUpon>Update_Client_Portal_Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MiddleTier\Update_Client_Portal_Login.aspx.designer.cs">
+      <DependentUpon>Update_Client_Portal_Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MiddleTier\Update_Order.aspx.cs">
+      <DependentUpon>Update_Order.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MiddleTier\Update_Order.aspx.designer.cs">
+      <DependentUpon>Update_Order.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MiddleTier\Update_Order_Status.aspx.cs">
+      <DependentUpon>Update_Order_Status.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MiddleTier\Update_Order_Status.aspx.designer.cs">
+      <DependentUpon>Update_Order_Status.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MiddleTier\Update_Revision.aspx.cs">
+      <DependentUpon>Update_Revision.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MiddleTier\Update_Revision.aspx.designer.cs">
+      <DependentUpon>Update_Revision.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="upload_form.aspx.cs">
+      <DependentUpon>upload_form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="upload_form.aspx.designer.cs">
+      <DependentUpon>upload_form.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Charting\Administration.aspx - Shortcut.lnk" />
+    <Content Include="Charting\Administration.aspx.cs - Shortcut.lnk" />
+    <Content Include="Charting\Administration.aspx.designer.cs - Shortcut.lnk" />
+    <Content Include="Charting\Assign_Order.aspx - Shortcut.lnk" />
+    <Content Include="Charting\Assign_Order.aspx.cs - Shortcut.lnk" />
+    <Content Include="Charting\bin - Shortcut.lnk" />
+    <Content Include="js\api\fonts\fontawesome-webfont.woff" />
+    <Content Include="js\api\js\highcharts.json" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\app-convert.properties" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\log4j.properties" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\app-convert.properties" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\converter\SVGConverter.class" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\converter\SVGConverterException.class" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\pool\AbstractPool%241.class" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\pool\AbstractPool.class" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\pool\BlockingQueuePool.class" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\pool\ObjectFactory.class" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\pool\ObjectPool.class" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\pool\PoolException.class" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\pool\ServerObjectFactory%24PortStatus.class" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\pool\ServerObjectFactory.class" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\server\Server%241.class" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\server\Server.class" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\server\ServerState.class" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\server\TimeOut.class" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\util\MimeType.class" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\util\TempDir.class" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\log4j.properties" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\target\maven-archiver\pom.properties" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\src\main\resources\ESAPI.properties" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\src\main\resources\log4j.properties" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\WEB-INF\pages\demo.jsp" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\WEB-INF\pages\error.jsp" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\WEB-INF\spring\app-convert.properties" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\classes\com\highcharts\export\controller\ExportController.class" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\classes\com\highcharts\export\controller\ZeroRequestParameterException.class" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\classes\com\highcharts\export\filter\CorsFilter.class" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\classes\com\highcharts\export\interceptor\RequestInterceptor.class" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\classes\com\highcharts\export\service\MonitorService.class" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\classes\ESAPI.properties" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\classes\log4j.properties" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web.war" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\classes\com\highcharts\export\filter\CorsFilter.class" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\classes\com\highcharts\export\service\MonitorService.class" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\classes\ESAPI.properties" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\classes\log4j.properties" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\pages\demo.jsp" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\pages\error.jsp" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\spring\app-convert.properties" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\maven-archiver\pom.properties" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\tmp\upload_66055da2_14bfe5cf823__8000_00003968.tmp" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\tmp\upload_66055da2_14bfe5cf823__8000_00007010.tmp" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\tmp\upload_66055da2_14bfe5cf823__8000_00011216.tmp" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\tmp\upload__64bb0635_14bc5e9b111__8000_00005086.tmp" />
+    <Content Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\tmp\upload__64bb0635_14bc5e9b111__8000_00005218.tmp" />
+    <Content Include="js\exporting-server\java\readme.md" />
+    <Content Include="js\exporting-server\phantomjs\readme.md" />
+    <Content Include="js\exporting-server\php\php-batik\index.php" />
+    <Content Include="js\LICENSE" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="packages.config" />
+    <Content Include="Service References\ServiceReference1\VisionWs.wsdl" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="data_dump\" />
+    <Folder Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\target\generated-sources\annotations\" />
+    <Folder Include="js\exporting-server\java\highcharts-export\highcharts-export-convert\target\surefire\" />
+    <Folder Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\generated-sources\annotations\" />
+    <Folder Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\classes\com\highcharts\export\controller\" />
+    <Folder Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\classes\com\highcharts\export\interceptor\" />
+    <Folder Include="js\exporting-server\java\highcharts-export\highcharts-export-web\target\surefire\" />
+    <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="uploads\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ServiceReference1\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>57627</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:57343/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

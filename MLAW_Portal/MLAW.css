@@ -1,0 +1,637 @@
+﻿html {
+    margin:0 auto;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight:300;
+    margin:0 auto;
+    width:100%;
+    text-align:center;
+    background:#ffffff;
+}
+
+
+.header {
+    height:100px;
+    background:#fafafa;
+}
+
+.app_container {
+    margin:0 auto;
+    text-align:center;
+    width:100%;
+    font-size:14px;
+    font-weight:400;
+}
+
+#order_entry_container {
+    margin:0 auto;
+    width:1000px;
+    text-align:left;
+}
+
+.app_section_title {
+    font-weight:400;
+    font-size:32px;
+}
+
+#dragandrophandler
+{
+border:2px dotted #0B85A1;
+width:360px;
+color:#92AAB0;
+text-align:left;vertical-align:middle;
+padding:10px 10px 10px 10px;
+margin-bottom:10px;
+font-size:200%;
+}
+
+#dragandrophandler2
+{
+border:2px dotted #0B85A1;
+width:380px;
+color:#92AAB0;
+text-align:left;vertical-align:middle;
+padding:10px 10px 10px 10px;
+margin-bottom:10px;
+font-size:200%;
+}
+
+
+#dragandrophandlerRevision
+{
+border:2px dotted #0B85A1;
+width:380px;
+color:#92AAB0;
+text-align:left;vertical-align:middle;
+padding:10px 10px 10px 10px;
+margin-bottom:10px;
+font-size:200%;
+}
+
+
+.progressBar {
+    width: 200px;
+    height: 22px;
+    border: 1px solid #ddd;
+    border-radius: 5px; 
+    overflow: hidden;
+    display:inline-block;
+    margin:0px 10px 5px 5px;
+    vertical-align:top;
+}
+ 
+.progressBar div {
+    height: 100%;
+    color: #fff;
+    text-align: right;
+    line-height: 22px; /* same as #progressBar height if we want text middle aligned */
+    width: 0;
+    background-color: #0ba1b5; border-radius: 3px; 
+}
+.statusbar
+{
+    border-top:1px solid #A9CCD1;
+    min-height:25px;
+    width:500px;
+    padding:10px 10px 0px 10px;
+    vertical-align:top;
+}
+.statusbar:nth-child(odd){
+    background:#EBEFF0;
+}
+.filename
+{
+display:inline-block;
+vertical-align:top;
+width:250px;
+}
+.filesize
+{
+display:inline-block;
+vertical-align:top;
+color:#30693D;
+width:100px;
+margin-left:10px;
+margin-right:5px;
+}
+.abort{
+    background-color:#A8352F;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    border-radius:4px;display:inline-block;
+    color:#fff;
+    font-family:arial;font-size:13px;font-weight:normal;
+    padding:4px 15px;
+    cursor:pointer;
+    display:none;
+    vertical-align:top
+    }
+
+
+.frm_row {
+    padding-top:5px;
+    padding-bottom:5px;
+    font-size:12px;
+}
+
+#quick_view_form {
+    background:#ffffff;
+    z-index:100;
+}
+
+#quick_view_form .frm_row {
+    padding-top:2px;
+    padding-bottom:2px;
+}
+.frm_label {
+    float:left;
+    width:85px;
+    font-weight:600;
+    font-size:12px;
+    text-transform:uppercase;
+    padding-top:3px;
+}
+
+.frm_input {
+    float:left;
+    width:500px;
+}
+
+.frm_view {
+    float:left;
+    width:500px;
+    font-weight:400;
+    font-size:12px;
+    padding-top:3px;
+}
+
+
+
+.logo {
+    background:url('/Images/mlaw_white.png');
+    background-size:89px 40px;
+    float:left;
+    width:100px;
+    height:40px;
+    background-repeat:no-repeat;
+    margin-left:15px;
+    margin-top:10px;
+    margin-right:15px;
+}
+
+#mlaw_header {
+  position:fixed;
+  top:0px;
+  z-index:1;
+  width:100%;
+  background:#2f2f2f;
+  height:60px;
+  text-align:left;
+}
+
+.arrow-down {
+	width: 0; 
+	height: 0; 
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-top: 20px solid #f00;
+}
+
+#quick_search::-webkit-input-placeholder { font-size:11px; padding-left:5px; padding-top:2px;}
+#quick_search::-moz-placeholder { font-size:11px; } /* firefox 19+ */
+#quick_search:-ms-input-placeholder { font-size:11px; } /* ie */
+#quick_search:-moz-placeholder { font-size:11px; }
+
+.header_button {
+  background: -webkit-linear-gradient(#4e4e4e, #2f2f2f); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#4e4e4e, #2f2f2f); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#4e4e4e, #2f2f2f); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#4e4e4e, #2f2f2f); /* Standard syntax */
+  color:#ffffff;
+  font-weight:600;
+  float:left;
+  border-left:1px solid #5a5a5a;
+  border-right:1px solid #5a5a5a;
+  padding:5px;
+  padding-left:10px;
+  cursor:pointer;
+}
+
+    .header_button:hover {
+        background:#000000;
+        cursor:pointer;
+    }
+
+.header_button_on {
+    background:#000000;
+}
+
+.nav {
+    float:right;
+    height:60px;
+}
+
+.nav_icon {
+    height:19px;
+    width:19px;
+    float:left;
+    margin-top:2px;
+    margin-right:10px;
+}
+
+.nav_item {
+    float:right;
+    padding-left:20px;
+    padding-right:20px;
+    padding-top:20px;
+    padding-bottom:4px;
+    margin-right:2px;
+    text-transform:uppercase;
+    font-size:16px;
+    cursor:pointer;
+    color:#1e2678;
+    height:100%;
+}
+
+.nav_item_on {
+    background:#ffffff;
+}
+
+#admin_container {
+
+}
+
+#type_ahead {
+    position:absolute;
+    display:none;
+    width:400px;
+    background:#ffffff;
+    text-align:left;
+    border:1px solid #696969;
+}
+
+    #type_ahead ul {
+        list-style-type: none;
+        padding-left:10px;
+    }
+
+    #type_ahead li {
+        
+    }
+
+.li_selected {
+    background:#1e2678;
+    color:#ffffff;
+}
+
+
+#admin_nav {
+    float:left;
+}
+
+.admin_nav_item {
+    background:#1e2678;
+    width:140px;
+    text-transform:uppercase;
+    color:#ffffff;
+    text-align:center;
+    padding-top:20px;
+    padding-bottom:14px;
+    font-size:12px;
+    margin-bottom:1px;
+    cursor:pointer;
+}
+
+.admin_nav_item_on {
+    background:#fafafa;
+    left:1px;
+    color:#000000;
+    font-weight:600;
+
+    }
+
+.admin_body {
+    min-height:800px;
+    width:100%;
+}
+
+#add_user {
+    width:100%;
+    text-align:right;
+}
+
+#user_list {
+    font-size:14px;
+    text-align:left;
+    margin-top:20px;
+}
+
+.order_entry_container {
+    background:#fafafa;
+}
+
+.admin_screen {
+    display:none;
+    text-align:left;
+}
+
+#client_listings {
+    margin-top:5px;
+    width:1800px;
+}
+
+.lst_title {
+    font-weight:700;
+    text-transform:uppercase;
+    float:left;
+    width:140px;
+    text-align:left;
+}
+
+.lst_item {
+    float:left;
+    width:140px;
+    text-align:left;
+}
+
+.lst_clickable {
+    float:left;
+    width:140px;
+    text-align:left;
+}
+.lst_clickable:hover {
+    text-decoration:underline;
+    cursor:pointer;
+}
+
+.txt_clickable {
+    cursor:pointer;
+    color:#1e2678;
+}
+
+    .txt_clickable:hover {
+        text-decoration:underline;
+    }
+
+
+#status_list {
+    background:#ffffff;
+    text-align:left;
+    position:absolute;
+    padding:5px;
+    border:1px solid #eeeeee;
+}
+
+
+.ddl_item {
+    border-bottom:1px solid #f1f1f1;
+    padding-top:4px;
+
+}
+
+    .ddl_item:hover {
+        background:#f1f1f1;
+        cursor:pointer;
+    }
+
+
+.button {
+    border-radius: 5px;
+    border:3px solid #696969;
+      background: -webkit-linear-gradient(#2f2f2f, #000000); /* For Safari 5.1 to 6.0 */
+      background: -o-linear-gradient(#2f2f2f, #000000); /* For Opera 11.1 to 12.0 */
+      background: -moz-linear-gradient(#2f2f2f, #000000); /* For Firefox 3.6 to 15 */
+      background: linear-gradient(#2f2f2f, #000000); /* Standard syntax */
+    cursor:pointer;
+    padding-left:10px;
+    padding-right:10px;
+    padding-top:2px;
+    padding-bottom:2px;
+    color:#ffffff;  
+    text-align:center;  
+}
+
+.flt_button {
+    background:#eeeeee;
+    border-radius:10px;
+    text-align:center;
+}
+
+    .flt_button:hover {
+        cursor:pointer;
+        background:#add8e6;
+    }
+
+.flt_button_on {
+    background:#1e2678;
+    color:#ffffff;
+}
+
+#login_box input[type="text"] {
+  display: block;
+  margin: 0;
+  width: 300px;
+  height:40px;
+  background:#696969;
+  color:#ffffff;
+  font-size: 16px;
+  font-weight:600;
+  appearance: none;
+  box-shadow: none;
+  border-radius: 5px;
+  border:0px;
+  color:#ffffff;
+  text-transform:uppercase;
+  padding-left:10px;
+  outline:none;
+}
+
+#login_box input[type="password"] {
+  display: block;
+  margin: 0;
+  width: 300px;
+  height:40px;
+  background:#818181;
+  color:#ffffff;
+  font-size: 16px;
+  font-weight:600;
+  appearance: none;
+  box-shadow: none;
+  border-radius: 5px;
+  border:0px;
+  color:#ffffff;
+  padding-left:10px;
+  outline:none;
+}
+
+#login_box input[type="text"]:focus { 
+    background-color: #000000;
+}
+
+#login_box input[type="password"]:focus { 
+    background-color: #000000;
+}
+
+#login_username::-webkit-input-placeholder { color:#ffffff;}
+#login_username::-moz-placeholder { color:#ffffff; } /* firefox 19+ */
+#login_username:-ms-input-placeholder { color:#ffffff;} /* ie */
+#login_username:-moz-placeholder { color:#ffffff;}
+
+#login_password::-webkit-input-placeholder { color:#ffffff;}
+#login_password::-moz-placeholder { color:#ffffff; } /* firefox 19+ */
+#login_password:-ms-input-placeholder { color:#ffffff;} /* ie */
+#login_password:-moz-placeholder { color:#ffffff;}
+
+
+.quick_search_result {
+    font-size:14px;
+    font-weight:400;
+}
+
+    .quick_search_result:hover {
+        text-decoration:underline;
+        cursor:pointer;
+    }
+
+
+.hdr_order_list_option {
+    margin-left:10px;
+    margin-top:10px;
+}
+
+    .hdr_order_list_option:hover {
+        cursor:pointer;
+        text-decoration:underline;
+    }
+
+
+#header_filters {
+      background:#2f2f2f;
+      width:100%;
+      color:#ffffff;
+      font-weight:600;
+}
+
+
+.header_generic {
+      background:#2f2f2f;
+      width:100%;
+      color:#ffffff;
+      font-weight:600;
+}
+
+
+#order_popup {
+    position:absolute;
+    top:80px;
+    left:180px;
+    height:600px;
+    width:1000px;
+    background:#ffffff;
+    display:none;
+    -webkit-box_shadow:0 0 20px #000000;
+    box-shadow:0 0 20px #000000;
+    
+}
+
+#create_subdivision_popup {
+    position:absolute;
+    top:80px;
+    left:180px;
+    height:300px;
+    width:400px;
+    z-index:3;
+    background:#ffffff;
+    display:none;
+    -webkit-box_shadow:0 0 20px #000000;
+    box-shadow:0 0 20px #000000;
+}
+
+#customer_portal {
+    margin-top:80px;
+    margin-left:40px;
+}
+
+.inspection_form {
+    width:800px;
+    margin: 0 auto;
+
+}
+
+    .inspection_form checkbox {
+          /* Double-sized Checkboxes */
+          -ms-transform: scale(2); /* IE */
+          -moz-transform: scale(2); /* FF */
+          -webkit-transform: scale(2); /* Safari and Chrome */
+          -o-transform: scale(2); /* Opera */
+          padding:6px;
+          font-size:14px;
+    }
+
+.insp_form_val {
+    width:100px;
+    float:left;
+    text-align:center;
+    font-size:14px;
+    -ms-transform: scale(2); /* IE */
+    -moz-transform: scale(2); /* FF */
+    -webkit-transform: scale(2); /* Safari and Chrome */
+    -o-transform: scale(2); /* Opera */
+    padding:6px;
+
+}
+
+
+.insp_form_label {
+    width:600px;
+    float:left;
+    text-align:left;
+    font-size:20px;
+    font-weight:400;
+}
+
+.insp_form_regular {
+    width:750px;
+    text-align:left;
+    padding-left:50px;
+    font-size:20px;
+    font-weight:400;
+    margin-top:40px;
+}
+
+.insp_form_radio {
+    width:50px;
+    -ms-transform: scale(2); /* IE */
+    -moz-transform: scale(2); /* FF */
+    -webkit-transform: scale(2); /* Safari and Chrome */
+    -o-transform: scale(2); /* Opera */
+    padding:5px;
+    float:left;
+        font-size:12px;
+}
+
+.insp_form_text {
+    width:600px;
+    float:left;
+}
+
+    .insp_form_text input[type="text"] {
+        height:24px;
+        font-size:20px;
+    }
+
+.inf_form_proj_num {
+    text-align:left;
+    font-size:30px;
+    font-weight:500;
+    margin-left:40px;
+}
+
+.inf_form_address {
+    text-align:left;
+    font-size:24px;
+    font-weight:500;
+    margin-left:40px;
+}
