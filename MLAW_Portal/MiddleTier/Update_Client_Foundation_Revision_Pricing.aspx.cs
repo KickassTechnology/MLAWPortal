@@ -11,6 +11,7 @@ namespace MLAW_Order_System
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //Updates Revision Pricing Information
             int iClientId = Convert.ToInt32(Request["Client_Id"]);
             double dBase = Convert.ToDouble(Request["Base"]);
             double dNewHome = Convert.ToDouble(Request["New_Home"]);

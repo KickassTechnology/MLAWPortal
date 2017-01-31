@@ -12,6 +12,7 @@ namespace MLAW_Order_System
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //toggles whether a customer is active or inactive
             int iClientId = Convert.ToInt32(Request["Client_Id"]);
             int iStatus = Convert.ToInt32(Request["Is_Active"]);
 

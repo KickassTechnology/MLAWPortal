@@ -13,6 +13,7 @@ namespace MLAW_Order_System
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //inserts an order into the database
             String strMLAWNumber = Request["MLAW_Number"].ToString();
             String strAddress = Request["Address"].ToString();
             String strCity = Request["City"].ToString();

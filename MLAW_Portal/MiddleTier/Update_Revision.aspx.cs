@@ -11,6 +11,7 @@ namespace MLAW_Order_System
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //updates revision information
             int iOrderId = Convert.ToInt32(Request["Order_Id"]);
             int iOrderStatusId = Convert.ToInt32(Request["Order_Status_Id"]);
             int iDesignerId = 0;

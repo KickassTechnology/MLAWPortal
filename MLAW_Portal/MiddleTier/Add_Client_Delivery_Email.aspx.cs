@@ -11,6 +11,7 @@ namespace MLAW_Order_System
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //Add an email address for the delivery of emails to the client
             int iClientId = Convert.ToInt32(Request["Client_Id"]);
             String strEmail = Request["Email"].ToString();
 

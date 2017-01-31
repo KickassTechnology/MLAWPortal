@@ -11,6 +11,7 @@ namespace MLAW_Order_System
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //updates a subdivision
             int iSubdivisionId = Convert.ToInt32(Request["Subdivision_Id"]);
             String strSubdivisionName = Request["Subdivision_Name"].ToString();
             int iSubdivisionNumber = Convert.ToInt32(Request["Subdivision_Number"]);

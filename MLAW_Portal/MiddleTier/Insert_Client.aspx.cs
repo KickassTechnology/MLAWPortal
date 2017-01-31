@@ -11,6 +11,7 @@ namespace MLAW_Order_System
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //Creates a client in the database
             String strShortName = Request["Short_Name"].ToString();
             String strFullName = Request["Full_Name"].ToString();
             String strAddress1 = Request["Billing_Address_1"].ToString();

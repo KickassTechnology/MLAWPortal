@@ -12,6 +12,7 @@ namespace MLAW_Order_System
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //inserts a subdivision into the database
             DAL dal = new DAL();
             DataSet ds = dal.insertSubdivision(Convert.ToInt32(Request["Client_Id"]), Convert.ToInt32(Request["Division_Id"]), Request["Division_Name"].ToString(), Convert.ToInt32(Request["Subdivision_Number"]));
 

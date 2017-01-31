@@ -12,6 +12,7 @@ namespace MLAW_Order_System
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //updates the username and password for a login to the client portal
             int iClientId = Convert.ToInt32(Request["client_id"]);
             String strUsername = Request["username"].ToString();
             String strPassword = Request["password"].ToString();

@@ -12,6 +12,7 @@ namespace MLAW_Order_System
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //Removes an email from the list of recipients for deliver
             int iMailId = Convert.ToInt32(Request["Client_Mail_Id"]);
             DAL dal = new DAL();
 

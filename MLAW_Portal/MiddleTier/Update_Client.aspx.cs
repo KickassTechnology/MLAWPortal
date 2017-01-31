@@ -12,6 +12,7 @@ namespace MLAW_Order_System
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //Updates customer information
             int iClientId = Convert.ToInt32(Request["Client_Id"]);
             String strClientShortName = Request["Client_Short_Name"].ToString();
             String strClientFullName = Request["Client_Full_Name"].ToString();

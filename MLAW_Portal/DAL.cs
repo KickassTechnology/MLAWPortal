@@ -8,6 +8,8 @@ using System.IO;
 
 namespace MLAW_Order_System
 {
+
+    //Makes all requests to the database for the app
     public class DAL
     {
         String strConn = "Server=mlawdb.cja22lachoyz.us-west-2.rds.amazonaws.com;Database=MLAW_MS;User Id=sa;Password=!sd2the2power!;";

@@ -12,6 +12,8 @@ namespace MLAW_Order_System
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            //Returns the list of Order Statuses 
             System.Web.Script.Serialization.JavaScriptSerializer serializer = new System.Web.Script.Serialization.JavaScriptSerializer();
             List<Dictionary<string, object>> rows = new List<Dictionary<string, object>>();
             Dictionary<string, object> row;

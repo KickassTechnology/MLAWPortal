@@ -11,6 +11,7 @@ namespace MLAW_Order_System
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //Allows the Foundation Admin to delete Orders
             int iOrderId = Convert.ToInt32(Request["Order_Id"]);
 
             DAL dal = new DAL();

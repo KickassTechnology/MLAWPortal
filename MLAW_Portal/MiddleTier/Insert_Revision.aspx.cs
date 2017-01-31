@@ -12,6 +12,7 @@ namespace MLAW_Order_System
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //Inserts a revision order into the database
             DAL dal = new DAL();
 
             String strOrderFile = Request["Order_Files"].ToString();

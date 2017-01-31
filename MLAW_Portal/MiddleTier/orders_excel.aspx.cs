@@ -12,6 +12,7 @@ namespace MLAW_Order_System
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //Returns orders based on filters in a .csv format
             String strStatuses = Request["Statuses"].ToString();
             
             Int32 iDateType = Convert.ToInt32(Request["Date_Type"]);

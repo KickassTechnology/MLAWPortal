@@ -12,9 +12,7 @@ namespace MLAW_Order_System
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            /*
-            [{"Subdivision_Id":15964,"Subdivision_Name":"Chaparral Crossing","Subdivision_Number":1,"Client_Id":3,"Division_Id":1,"Division_Id1":1,"Division_Desc":"Austin","Division_Number":1},
-            */
+            // Returns a list of all the inspection Types
             DAL dal = new DAL();
             DataSet dsInspectionTypes = dal.getAllInspectionTypes();
 
